@@ -1,0 +1,96 @@
+# Configuración de seguridad para el backend
+# Landing Page Security Backend
+
+# Denegar acceso a archivos sensibles
+<Files "*.php">
+    # Solo permitir acceso a archivos API
+    <RequireAll>
+        Require all denied
+    </RequireAll>
+</Files>
+
+# Permitir acceso solo a archivos API y archivos de prueba
+<FilesMatch "^(submit-form|get-csrf-token|test-simple|debug-csrf|hello|webhook-paypal|test-webhook)\.php$">
+    Require all granted
+</FilesMatch>
+
+# Denegar acceso a directorios
+Options -Indexes
+
+# Denegar acceso a archivos de configuración
+<FilesMatch "\.(env|ini|conf|config|log|bak|backup|old|tmp)$">
+    Require all denied
+</FilesMatch>
+
+# Denegar acceso a archivos de clases directamente
+<FilesMatch "^(Security|RateLimiter|Logger|AirtableClient)\.php$">
+    Require all denied
+</FilesMatch>
+
+# Headers de seguridad
+<IfModule mod_headers.c>
+    # Prevenir clickjacking
+    Header always set X-Frame-Options "DENY"
+
+    # Prevenir MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions Policy
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+    # Remove server info
+    Header always unset Server
+    Header always unset X-Powered-By
+
+    # CORS headers para tu dominio
+    Header always set Access-Control-Allow-Origin "https://tu-dominio.com"
+    Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+    Header always set Access-Control-Max-Age "86400"
+</IfModule>
+
+# Forzar HTTPS (comentado para desarrollo local)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirigir HTTP a HTTPS (deshabilitado para localhost)
+    # RewriteCond %{HTTPS} off
+    # RewriteCond %{HTTP_HOST} !^localhost
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Manejar preflight OPTIONS requests
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ $1 [R=200,L]
+</IfModule>
+
+# Límites de tamaño de request
+<IfModule mod_php.c>
+    php_value post_max_size 1M
+    php_value upload_max_filesize 1M
+    php_value max_execution_time 30
+    php_value max_input_time 30
+    php_value memory_limit 64M
+</IfModule>
+
+# Logging de errores
+<IfModule mod_log_config.c>
+    LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+    CustomLog logs/backend_access.log combined
+    ErrorLog logs/backend_error.log
+</IfModule>
+
+# Rate limiting básico (si mod_evasive está disponible)
+<IfModule mod_evasive24.c>
+    DOSHashTableSize    2048
+    DOSPageCount        10
+    DOSPageInterval     1
+    DOSSiteCount        50
+    DOSSiteInterval     1
+    DOSBlockingPeriod   600
+</IfModule>
