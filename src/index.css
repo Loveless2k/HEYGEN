@@ -1059,3 +1059,17 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     grid-column: 4 / 7; /* Ocupa columnas 4-6 (mitad derecha) */
   }
 }
+
+/* Estilos para la sección de beneficios */
+.news-style-benefits {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 35px;
+}
+
+@media (min-width: 768px) {
+  .news-style-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

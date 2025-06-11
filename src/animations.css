@@ -243,3 +243,294 @@
 .delay-1000 {
   animation-delay: 1s;
 }
+
+/* Modern responsive animations for FAQ section */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(30deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* Enhanced shimmer for modern buttons */
+@keyframes shimmerButton {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .animate-bounce {
+    animation: bounce 1.5s ease infinite;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-5px);
+  }
+
+  .reveal {
+    transition: all 0.6s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-bounce {
+    animation: bounce 1s ease infinite;
+  }
+
+  .reveal {
+    transition: all 0.4s ease;
+  }
+
+  .reveal-up {
+    transform: translateY(30px);
+  }
+
+  .reveal-left {
+    transform: translateX(-30px);
+  }
+
+  .reveal-right {
+    transform: translateX(30px);
+  }
+}
+
+/* Additional animations for modern form */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Form field focus animations */
+.form-field-focus {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field-focus:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+}
+
+/* Button hover animations */
+.btn-modern {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.btn-modern:active {
+  transform: translateY(0);
+  transition: all 0.1s ease;
+}
+
+/* Checkbox animation */
+@keyframes checkboxCheck {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+.checkbox-check {
+  animation: checkboxCheck 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Success indicator animation */
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-indicator {
+  animation: successPop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium form animations */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Enhanced floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-2deg);
+  }
+}
+
+/* Premium button glow effect */
+@keyframes buttonGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(74, 144, 226, 0.6);
+  }
+}
+
+/* Form field enhancement */
+.form-field-premium {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field-premium:focus {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 6px rgba(74, 144, 226, 0.15),
+    0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Trust indicator hover */
+@keyframes trustHover {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    transform: translateY(-3px) scale(1.05);
+  }
+}
+
+/* Icon pulse for premium elements */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+}
+
+/* Premium shimmer with multiple layers */
+@keyframes premiumShimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+/* Gradient text animation */
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Enhanced success pop with bounce */
+@keyframes successBounce {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3) rotate(180deg);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.9) rotate(270deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Premium container entrance */
+@keyframes premiumEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Conic gradient spin for premium elements */
+@keyframes conicSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
