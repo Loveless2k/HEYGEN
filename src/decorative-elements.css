@@ -1,0 +1,668 @@
+/* Elementos decorativos y formas geométricas suaves */
+
+/* Formas decorativas de fondo */
+.decorative-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decorative-shapes::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(154, 218, 251, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float-gentle 8s ease-in-out infinite;
+}
+
+.decorative-shapes::after {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  left: 8%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(228, 105, 148, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float-gentle 6s ease-in-out infinite reverse;
+}
+
+/* Elementos decorativos para secciones */
+.section-decorative {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-decorative::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, rgba(200, 162, 200, 0.05) 0%, rgba(154, 218, 251, 0.05) 100%);
+  border-radius: 50%;
+  animation: rotate-slow 20s linear infinite;
+}
+
+.section-decorative::after {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  left: -5%;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(214, 95, 171, 0.06) 0%, rgba(228, 105, 148, 0.06) 100%);
+  border-radius: 50%;
+  animation: rotate-slow 15s linear infinite reverse;
+}
+
+/* Líneas decorativas curvas */
+.curved-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--tertiary) 50%, transparent 100%);
+  opacity: 0.3;
+}
+
+.curved-line::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent 0%, var(--secondary) 50%, transparent 100%);
+  opacity: 0.2;
+  filter: blur(1px);
+}
+
+/* Iconos decorativos con estilo minimalista */
+.icon-decorative {
+  stroke: var(--primary);
+  stroke-width: 2;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+.icon-decorative:hover {
+  stroke: var(--accent-alt);
+  filter: drop-shadow(0 0 8px rgba(214, 95, 171, 0.3));
+}
+
+/* Efectos de glassmorphism */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-effect-dark {
+  background: rgba(45, 55, 72, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(154, 218, 251, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradientes de texto */
+.gradient-text-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--tertiary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-secondary {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent-alt) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animaciones suaves */
+@keyframes float-gentle {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-10px) translateX(5px) rotate(2deg); 
+  }
+  66% { 
+    transform: translateY(5px) translateX(-3px) rotate(-1deg); 
+  }
+}
+
+@keyframes rotate-slow {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+
+@keyframes shimmer-new {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(74, 144, 226, 0.1) 25%,
+    rgba(154, 218, 251, 0.2) 50%,
+    rgba(74, 144, 226, 0.1) 75%,
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer-new 3s infinite;
+}
+
+/* Efectos de hover mejorados */
+.enhanced-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.enhanced-hover:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15);
+}
+
+/* Bordes animados */
+.animated-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--theme-bg), var(--theme-bg)) padding-box,
+              linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary)) border-box;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animated-border:hover::before {
+  opacity: 1;
+}
+
+/* Partículas flotantes */
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--tertiary);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float-particle 8s infinite linear;
+}
+
+.particle:nth-child(2) {
+  background: var(--accent);
+  animation-delay: -2s;
+  animation-duration: 10s;
+}
+
+.particle:nth-child(3) {
+  background: var(--secondary);
+  animation-delay: -4s;
+  animation-duration: 12s;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Efectos de carga y transición */
+.loading-shimmer {
+  background: linear-gradient(90deg, 
+    var(--gray-light) 25%, 
+    rgba(74, 144, 226, 0.1) 50%, 
+    var(--gray-light) 75%);
+  background-size: 200% 100%;
+  animation: shimmer-new 1.5s infinite;
+}
+
+/* Estilos para sección de beneficios tipo noticias */
+.news-style-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-article {
+  background: var(--theme-card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(74, 144, 226, 0.1);
+  position: relative;
+}
+
+.benefit-article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15);
+  border-color: var(--primary);
+}
+
+.benefit-article::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.benefit-article:hover::before {
+  opacity: 1;
+}
+
+.benefit-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--tertiary) 0%, var(--primary) 100%);
+}
+
+.benefit-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.benefit-article:hover .benefit-image {
+  transform: scale(1.05);
+}
+
+.benefit-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(228, 105, 148, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.benefit-article:hover .benefit-image-overlay {
+  opacity: 1;
+}
+
+.benefit-content {
+  padding: 24px;
+}
+
+.benefit-category {
+  display: inline-block;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.benefit-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  color: var(--theme-text);
+}
+
+.benefit-title .highlight {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent-alt) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.benefit-description {
+  color: var(--theme-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.benefit-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--theme-border);
+}
+
+.benefit-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--theme-text-muted);
+  font-size: 14px;
+}
+
+.benefit-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+}
+
+.benefit-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.benefit-cta:hover {
+  color: var(--accent-alt);
+  transform: translateX(4px);
+}
+
+/* Variantes de artículos */
+.benefit-article.featured {
+  grid-column: span 2;
+}
+
+.benefit-article.featured .benefit-image-container {
+  height: 250px;
+}
+
+.benefit-article.featured .benefit-title {
+  font-size: 24px;
+}
+
+/* Estilos para sección de equipo tipo redes sociales */
+.team-social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.team-social-card {
+  background: var(--theme-card-bg);
+  border-radius: 20px;
+  padding: 30px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(74, 144, 226, 0.1);
+  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.08);
+}
+
+.team-social-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15);
+  border-color: var(--primary);
+}
+
+.team-social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-social-card:hover::before {
+  opacity: 1;
+}
+
+.team-avatar-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid transparent;
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) padding-box,
+              linear-gradient(135deg, var(--primary), var(--secondary)) border-box;
+  transition: all 0.3s ease;
+}
+
+.team-social-card:hover .team-avatar {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.team-avatar-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  border: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.team-social-card:hover .team-avatar-fallback {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.team-specialty-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, var(--accent-alt), var(--secondary));
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(214, 95, 171, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.team-member-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--theme-text);
+  transition: color 0.3s ease;
+}
+
+.team-social-card:hover .team-member-name {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.team-member-role {
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.team-member-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--theme-text-secondary);
+  margin-bottom: 20px;
+}
+
+.team-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.team-social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--tertiary), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.team-social-link:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+  background: linear-gradient(135deg, var(--secondary), var(--accent-alt));
+}
+
+.team-experience-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(74, 144, 226, 0.1);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 12px;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-social-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .team-social-card {
+    padding: 24px 20px;
+  }
+
+  .team-avatar-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-avatar-fallback {
+    font-size: 30px;
+  }
+
+  .team-member-name {
+    font-size: 20px;
+  }
+
+  .news-style-benefits {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .benefit-article.featured {
+    grid-column: span 1;
+  }
+
+  .benefit-image-container {
+    height: 180px;
+  }
+
+  .benefit-article.featured .benefit-image-container {
+    height: 200px;
+  }
+
+  .benefit-content {
+    padding: 20px;
+  }
+
+  .decorative-shapes::before,
+  .decorative-shapes::after {
+    width: 80px;
+    height: 80px;
+  }
+
+  .section-decorative::before {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section-decorative::after {
+    width: 100px;
+    height: 100px;
+  }
+}

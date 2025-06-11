@@ -155,13 +155,13 @@
 /* Animación de pulso para destacar elementos importantes */
 @keyframes pulse-highlight {
   0% {
-    box-shadow: 0 0 0 0 rgba(145, 182, 182, 0.4);
+    box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(145, 182, 182, 0);
+    box-shadow: 0 0 0 15px rgba(74, 144, 226, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(145, 182, 182, 0);
+    box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
   }
 }
 

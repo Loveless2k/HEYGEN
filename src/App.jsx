@@ -765,254 +765,401 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> 
 
 
 
-        {/* Benefits Section */}
-        <section className="section section-themed" style={{ backgroundColor: 'var(--theme-surface)' }}>
+        {/* Benefits Section - Estilo Noticias Moderno */}
+        <section className="section section-themed section-decorative" style={{ backgroundColor: 'var(--theme-surface)' }}>
           <div className="container">
-            <h2 style={{ textAlign: 'center', marginBottom: '30px', fontSize: '28px', fontWeight: '700', color: 'var(--theme-text)' }} className="reveal reveal-up">
-              ¿Por qué esta habilidad puede cambiar tu futuro digital?<br/>Mira esto:
-            </h2>
+            <div style={{ textAlign: 'center', marginBottom: '50px' }} className="reveal reveal-up">
+              <span style={{
+                display: 'inline-block',
+                padding: '8px 20px',
+                backgroundColor: 'var(--primary)',
+                color: 'white',
+                borderRadius: '25px',
+                fontSize: '14px',
+                fontWeight: '600',
+                marginBottom: '20px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px'
+              }}>
+                🚀 Transformación Digital
+              </span>
+              <h2 style={{
+                fontSize: '32px',
+                fontWeight: '700',
+                color: 'var(--theme-text)',
+                marginBottom: '16px',
+                lineHeight: '1.2'
+              }}>
+                ¿Por qué esta habilidad puede cambiar tu futuro digital?
+              </h2>
+              <p style={{
+                fontSize: '18px',
+                color: 'var(--theme-text-secondary)',
+                maxWidth: '600px',
+                margin: '0 auto'
+              }}>
+                Descubre cómo la IA puede transformar tu carrera y abrir nuevas oportunidades económicas
+              </p>
+            </div>
 
-            <div className="benefits-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-              <div style={{ padding: '24px', borderRadius: '8px' }} className="reveal reveal-left card-hover benefit-card">
-                <h3 style={{ marginBottom: '12px', fontSize: '18px', fontWeight: '700', color: 'var(--primary)' }}>
-                  CREA <span style={{ color: 'var(--accent)' }}>CONTENIDO PROFESIONAL</span> CON IA EN MINUTOS
-                </h3>
-                <p style={{ color: 'var(--theme-text)', marginBottom: '12px', fontSize: '16px' }}>
-                  En solo <strong>90 minutos</strong> aprenderás una habilidad digital moderna, lista para monetizar sin depender de nadie.
-                </p>
-              </div>
+            <div className="news-style-benefits">
+              {/* Artículo 1 - Creación de Contenido */}
+              <article className="benefit-article reveal reveal-left">
+                <div className="benefit-image-container">
+                  <img
+                    src="./avatars/avatar-content-creation.png"
+                    alt="Avatar creando contenido profesional con IA"
+                    className="benefit-image"
+                  />
+                  <div className="benefit-image-overlay"></div>
+                </div>
+                <div className="benefit-content">
+                  <span className="benefit-category">Creación</span>
+                  <h3 className="benefit-title">
+                    Crea <span className="highlight">Contenido Profesional</span> con IA en Minutos
+                  </h3>
+                  <p className="benefit-description">
+                    En solo 90 minutos aprenderás una habilidad digital moderna, lista para monetizar sin depender de nadie. Domina las herramientas que están revolucionando la creación de contenido.
+                  </p>
+                  <div className="benefit-meta">
+                    <div className="benefit-time">
+                      <svg className="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      90 min de aprendizaje
+                    </div>
+                    <a href="#" className="benefit-cta">
+                      Leer más
+                      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
 
-              <div style={{ padding: '24px', borderRadius: '8px' }} className="reveal reveal-up card-hover benefit-card">
-                <h3 style={{ marginBottom: '12px', fontSize: '18px', fontWeight: '700', color: 'var(--primary)' }}>
-                  CREA Y <span style={{ color: 'var(--accent)' }}>VENDE CONTENIDO</span> DESDE HOY MISMO
-                </h3>
-                <p style={{ color: 'var(--theme-text)', marginBottom: '12px', fontSize: '16px' }}>
-                  Esta habilidad te permite lanzar contenido rentable y empezar a generar ingresos desde el primer día.
-                </p>
-              </div>
+              {/* Artículo 2 - Monetización */}
+              <article className="benefit-article reveal reveal-up">
+                <div className="benefit-image-container">
+                  <img
+                    src="./avatars/avatar-selling.png"
+                    alt="Avatar vendiendo y monetizando contenido"
+                    className="benefit-image"
+                  />
+                  <div className="benefit-image-overlay"></div>
+                </div>
+                <div className="benefit-content">
+                  <span className="benefit-category">Monetización</span>
+                  <h3 className="benefit-title">
+                    Crea y <span className="highlight">Vende Contenido</span> desde Hoy Mismo
+                  </h3>
+                  <p className="benefit-description">
+                    Esta habilidad te permite lanzar contenido rentable y empezar a generar ingresos desde el primer día. Aprende estrategias probadas de monetización.
+                  </p>
+                  <div className="benefit-meta">
+                    <div className="benefit-time">
+                      <svg className="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                      </svg>
+                      Ingresos inmediatos
+                    </div>
+                    <a href="#" className="benefit-cta">
+                      Leer más
+                      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
 
-              <div style={{ padding: '24px', borderRadius: '8px' }} className="reveal reveal-right card-hover benefit-card">
-                <h3 style={{ marginBottom: '12px', fontSize: '18px', fontWeight: '700', color: 'var(--primary)' }}>
-                  <span style={{ color: 'var(--accent)' }}>POTENCIA TU ESTILO</span> SIN PERDER TU ESENCIA
-                </h3>
-                <p style={{ color: 'var(--theme-text)', marginBottom: '12px', fontSize: '16px' }}>
-                  Integra la IA a tu proceso creativo sin comprometer lo que te hace auténtico y valioso.
-                </p>
-              </div>
+              {/* Artículo 3 - Creatividad */}
+              <article className="benefit-article reveal reveal-right">
+                <div className="benefit-image-container">
+                  <img
+                    src="./avatars/avatar-creative.png"
+                    alt="Avatar potenciando creatividad con IA"
+                    className="benefit-image"
+                  />
+                  <div className="benefit-image-overlay"></div>
+                </div>
+                <div className="benefit-content">
+                  <span className="benefit-category">Creatividad</span>
+                  <h3 className="benefit-title">
+                    <span className="highlight">Potencia tu Estilo</span> sin Perder tu Esencia
+                  </h3>
+                  <p className="benefit-description">
+                    Integra la IA a tu proceso creativo sin comprometer lo que te hace auténtico y valioso. Mantén tu voz única mientras amplias tus capacidades.
+                  </p>
+                  <div className="benefit-meta">
+                    <div className="benefit-time">
+                      <svg className="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                      Creatividad amplificada
+                    </div>
+                    <a href="#" className="benefit-cta">
+                      Leer más
+                      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
 
-              <div style={{ padding: '24px', borderRadius: '8px' }} className="reveal reveal-left card-hover benefit-card">
-                <h3 style={{ marginBottom: '12px', fontSize: '18px', fontWeight: '700', color: 'var(--primary)' }}>
-                  HAZ QUE LA IA POTENCIE TU ESTILO Y TU <span style={{ color: 'var(--accent)' }}>VALOR CREATIVO</span>
-                </h3>
-                <p style={{ color: 'var(--theme-text)', marginBottom: '12px', fontSize: '16px' }}>
-                  Aprende en solo 90 minutos a integrar la inteligencia artificial para amplificar tu esencia creativa y diferenciarte en el mercado, permitiéndote liderar con innovación en lugar de competir por precio en tus proyectos y contenidos.
-                </p>
-              </div>
+              {/* Artículo 4 - Innovación */}
+              <article className="benefit-article reveal reveal-left featured">
+                <div className="benefit-image-container">
+                  <img
+                    src="./avatars/avatar-innovation.png"
+                    alt="Avatar liderando con innovación"
+                    className="benefit-image"
+                  />
+                  <div className="benefit-image-overlay"></div>
+                </div>
+                <div className="benefit-content">
+                  <span className="benefit-category">Innovación</span>
+                  <h3 className="benefit-title">
+                    Haz que la IA Potencie tu Estilo y tu <span className="highlight">Valor Creativo</span>
+                  </h3>
+                  <p className="benefit-description">
+                    Aprende en solo 90 minutos a integrar la inteligencia artificial para amplificar tu esencia creativa y diferenciarte en el mercado, permitiéndote liderar con innovación en lugar de competir por precio en tus proyectos y contenidos.
+                  </p>
+                  <div className="benefit-meta">
+                    <div className="benefit-time">
+                      <svg className="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                      Liderazgo innovador
+                    </div>
+                    <a href="#" className="benefit-cta">
+                      Leer más
+                      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
 
-              <div style={{ padding: '24px', borderRadius: '8px' }} className="reveal reveal-up card-hover benefit-card">
-                <h3 style={{ marginBottom: '12px', fontSize: '18px', fontWeight: '700', color: 'var(--primary)' }}>
-                  LIBERA TU <span style={{ color: 'var(--accent)' }}>POTENCIAL ECONÓMICO</span> CON IA, SIN NECESIDAD DE SER UN EXPERTO EN TECNOLOGÍA
-                </h3>
-                <p style={{ color: 'var(--theme-text)', marginBottom: '12px', fontSize: '16px' }}>
-                  Siente la confianza de crear contenido de nivel profesional y generar ingresos tangibles mediante la inteligencia artificial, gracias a un taller accesible que te guía paso a paso, demostrándote que no se requiere ser un gurú tecnológico para construir tu camino hacia la libertad económica y digital.
-                </p>
-              </div>
+              {/* Artículo 5 - Potencial Económico */}
+              <article className="benefit-article reveal reveal-right">
+                <div className="benefit-image-container">
+                  <img
+                    src="./avatars/avatar-economic.png"
+                    alt="Avatar liberando potencial económico"
+                    className="benefit-image"
+                  />
+                  <div className="benefit-image-overlay"></div>
+                </div>
+                <div className="benefit-content">
+                  <span className="benefit-category">Libertad Económica</span>
+                  <h3 className="benefit-title">
+                    Libera tu <span className="highlight">Potencial Económico</span> con IA
+                  </h3>
+                  <p className="benefit-description">
+                    Siente la confianza de crear contenido de nivel profesional y generar ingresos tangibles mediante la inteligencia artificial, sin necesidad de ser un experto en tecnología.
+                  </p>
+                  <div className="benefit-meta">
+                    <div className="benefit-time">
+                      <svg className="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                      </svg>
+                      Libertad financiera
+                    </div>
+                    <a href="#" className="benefit-cta">
+                      Leer más
+                      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        {/* Quiénes Somos Section */}
-        <section className="section section-themed" style={{ backgroundColor: 'var(--theme-bg)' }}>
+        {/* Quiénes Somos Section - Diseño Tipo Redes Sociales */}
+        <section className="section section-themed section-decorative" style={{ backgroundColor: 'var(--theme-bg)' }}>
           <div className="container">
-            <h2 style={{ textAlign: 'center', marginBottom: '20px', fontSize: '28px', fontWeight: '700', color: 'var(--theme-text)' }} className="reveal reveal-up">
-              ¿Quién está detrás de todo esto? Personas como tú.
-            </h2>
-            <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 40px', color: 'var(--gray)' }} className="reveal reveal-up">
-              Somos una empresa emergente. Un equipo de creativos, diseñadores, emprendedores y educadores que creemos que la inteligencia artificial no debería ser solo para expertos.
-            </p>
-            <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 40px', color: 'var(--gray)' }} className="reveal reveal-up">
-              Por eso creamos este taller: para hacer accesible lo complejo, sin perder lo humano.
-            </p>
-            <p style={{ textAlign: 'center', marginBottom: '30px', fontWeight: '600', color: 'var(--theme-text)' }} className="reveal reveal-up">
-              Aquí puedes conocernos 👇
-            </p>
+            <div style={{ textAlign: 'center', marginBottom: '50px' }} className="reveal reveal-up">
+              <span style={{
+                display: 'inline-block',
+                padding: '8px 20px',
+                backgroundColor: 'var(--secondary)',
+                color: 'white',
+                borderRadius: '25px',
+                fontSize: '14px',
+                fontWeight: '600',
+                marginBottom: '20px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px'
+              }}>
+                👥 Nuestro Equipo
+              </span>
+              <h2 style={{
+                fontSize: '32px',
+                fontWeight: '700',
+                color: 'var(--theme-text)',
+                marginBottom: '16px',
+                lineHeight: '1.2'
+              }}>
+                ¿Quién está detrás de todo esto? Personas como tú.
+              </h2>
+              <p style={{
+                fontSize: '18px',
+                color: 'var(--theme-text-secondary)',
+                maxWidth: '700px',
+                margin: '0 auto 16px'
+              }}>
+                Somos una empresa emergente. Un equipo de creativos, diseñadores, emprendedores y educadores que creemos que la inteligencia artificial no debería ser solo para expertos.
+              </p>
+              <p style={{
+                fontSize: '16px',
+                color: 'var(--theme-text-secondary)',
+                maxWidth: '600px',
+                margin: '0 auto'
+              }}>
+                Por eso creamos este taller: para hacer accesible lo complejo, sin perder lo humano.
+              </p>
+            </div>
 
-            <div style={{ maxWidth: '900px', margin: '0 auto 40px', position: 'relative' }} className="reveal reveal-up">
-              <Slider
-                dots={true}
-                infinite={true}
-                speed={500}
-                slidesToShow={2}
-                slidesToScroll={2}
-                autoplay={false}
-                arrows={true}
-                responsive={[
-                  {
-                    breakpoint: 768,
-                    settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1
-                    }
-                  }
-                ]}
-                className="team-carousel"
-              >
-                {/* Miembro 1 */}
-                <div style={{ padding: '10px' }}>
-                  <div style={{
-                    padding: '30px',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    height: '100%'
-                  }} className="card-hover team-card">
-                    <div style={{
-                      width: '120px',
-                      height: '120px',
-                      borderRadius: '50%',
-                      backgroundColor: 'var(--primary)',
-                      color: 'white',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '20px',
-                      fontSize: '40px',
-                      overflow: 'hidden'
-                    }}>
-                      <img src="/team-member-1.jpg" alt="Valentina Ruiz" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.parentNode.innerHTML = 'VR';
-                      }} />
-                    </div>
-                    <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '12px', color: 'var(--theme-text)' }}>
-                      Valentina Ruiz
-                    </h3>
-                    <p style={{ fontSize: '16px', color: 'var(--gray)', marginBottom: '16px' }}>
-                      Diseñadora digital y co-creadora del taller. Su pasión es hacer que las herramientas tecnológicas se vuelvan fáciles, bonitas y humanas.
-                    </p>
-                  </div>
+            <div className="team-social-grid"
+              style={{
+                opacity: 0,
+                animation: 'fadeInUp 0.8s ease forwards',
+                animationDelay: '0.3s'
+              }}
+            >
+              {/* Miembro 1 - Valentina Ruiz */}
+              <div className="team-social-card reveal reveal-left">
+                <div className="team-avatar-container">
+                  <div className="team-specialty-badge">Diseño</div>
+                  <img
+                    src="/nosotros/roa.png"
+                    alt="Valentina Ruiz"
+                    className="team-avatar"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      const fallback = document.createElement('div');
+                      fallback.className = 'team-avatar-fallback';
+                      fallback.textContent = 'VR';
+                      e.target.parentNode.appendChild(fallback);
+                    }}
+                  />
                 </div>
+                <h3 className="team-member-name">Javier Roa</h3>
+                <p className="team-member-role">Diseñadora Digital</p>
+                <p className="team-member-description">
+                  Co-creadora del taller. Su pasión es hacer que las herramientas tecnológicas se vuelvan fáciles, bonitas y humanas.
+                </p>
+                <div className="team-experience-badge">
+                  <span>⭐</span>
+                  <span>5+ años de experiencia</span>
+                </div>
+                <div className="team-social-links">
+                  <a href="#" className="team-social-link" title="LinkedIn">
+                    <span>💼</span>
+                  </a>
+                  <a href="#" className="team-social-link" title="Portfolio">
+                    <span>🎨</span>
+                  </a>
+                  <a href="#" className="team-social-link" title="Email">
+                    <span>✉️</span>
+                  </a>
+                </div>
+              </div>
 
-                {/* Miembro 2 */}
-                <div style={{ padding: '10px' }}>
-                  <div style={{
-                    padding: '30px',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    height: '100%'
-                  }} className="card-hover team-card">
-                    <div style={{
-                      width: '120px',
-                      height: '120px',
-                      borderRadius: '50%',
-                      backgroundColor: 'var(--secondary)',
-                      color: 'white',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '20px',
-                      fontSize: '40px',
-                      overflow: 'hidden'
-                    }}>
-                      <img src="/team-member-2.jpg" alt="Luis García" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.parentNode.innerHTML = 'LG';
-                      }} />
-                    </div>
-                    <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '12px', color: 'var(--theme-text)' }}>
-                      Luis García
-                    </h3>
-                    <p style={{ fontSize: '16px', color: 'var(--gray)', marginBottom: '16px' }}>
-                      Emprendedor digital con más de 10 años en formación online. Cree que enseñar desde la empatía es la clave de la transformación.
-                    </p>
-                  </div>
+              {/* Miembro 2 - CamiDevAI */}
+              <div className="team-social-card reveal reveal-up">
+                <div className="team-avatar-container">
+                  <div className="team-specialty-badge">IA Creativa</div>
+                  <img
+                    src="/nosotros/camidevai.png"
+                    alt="CamiDevAI"
+                    className="team-avatar"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      const fallback = document.createElement('div');
+                      fallback.className = 'team-avatar-fallback';
+                      fallback.textContent = '💡';
+                      e.target.parentNode.appendChild(fallback);
+                    }}
+                  />
                 </div>
+                <h3 className="team-member-name">CamiDevAI</h3>
+                <p className="team-member-role">Ingeniera en Informática | Experta en IA Creativa</p>
+                <p className="team-member-description">
+                  📍 Marketing • IA Generativa • Crecimiento Orgánico<br/><br/>
+                  Con posgrado en Inteligencia Artificial y background en ingeniería informática, combina tecnología y creatividad para descubrir, analizar y viralizar herramientas de IA.<br/><br/>
+                  🔍 Convierte herramientas complejas en contenido que conecta y vende.
+                </p>
+                <div className="team-experience-badge">
+                  <span>🚀</span>
+                  <span>+5 años explorando el futuro de la IA creativa</span>
+                </div>
+                <div className="team-social-links">
+                  <a href="#" className="team-social-link" title="Ingeniería & análisis de herramientas">
+                    <span>�‍💻</span>
+                  </a>
+                  <a href="#" className="team-social-link" title="Estrategia viral para redes sociales">
+                    <span>�</span>
+                  </a>
+                  <a href="#" className="team-social-link" title="Automatización con propósito">
+                    <span>🎯</span>
+                  </a>
+                  <a href="#" className="team-social-link" title="Contenido educativo con alto impacto">
+                    <span>✨</span>
+                  </a>
+                </div>
+              </div>
 
-                {/* Miembro 3 */}
-                <div style={{ padding: '10px' }}>
-                  <div style={{
-                    padding: '30px',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    height: '100%'
-                  }} className="card-hover team-card">
-                    <div style={{
-                      width: '120px',
-                      height: '120px',
-                      borderRadius: '50%',
-                      backgroundColor: 'var(--accent)',
-                      color: 'white',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '20px',
-                      fontSize: '40px',
-                      overflow: 'hidden'
-                    }}>
-                      <img src="/team-member-3.jpg" alt="Camila Ortega" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.parentNode.innerHTML = 'CO';
-                      }} />
-                    </div>
-                    <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '12px', color: 'var(--theme-text)' }}>
-                      Camila Ortega
-                    </h3>
-                    <p style={{ fontSize: '16px', color: 'var(--gray)', marginBottom: '16px' }}>
-                      Coach de comunicación. Ayuda a personas a usar su voz (y ahora también sus avatares) para transformar sus negocios.
-                    </p>
-                  </div>
+              {/* Miembro 3 - Camila Ortega */}
+              <div className="team-social-card reveal reveal-right">
+                <div className="team-avatar-container">
+                  <div className="team-specialty-badge">Coach</div>
+                  <img
+                    src="/nosotros/danny.png"
+                    alt="Camila Ortega"
+                    className="team-avatar"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      const fallback = document.createElement('div');
+                      fallback.className = 'team-avatar-fallback';
+                      fallback.textContent = 'CO';
+                      e.target.parentNode.appendChild(fallback);
+                    }}
+                  />
                 </div>
+                <h3 className="team-member-name">Camila Ortega</h3>
+                <p className="team-member-role">Coach de Comunicación</p>
+                <p className="team-member-description">
+                  Ayuda a personas a usar su voz (y ahora también sus avatares) para transformar sus negocios.
+                </p>
+                <div className="team-experience-badge">
+                  <span>🎯</span>
+                  <span>7+ años de experiencia</span>
+                </div>
+                <div className="team-social-links">
+                  <a href="#" className="team-social-link" title="LinkedIn">
+                    <span>💼</span>
+                  </a>
+                  <a href="#" className="team-social-link" title="Instagram">
+                    <span>📸</span>
+                  </a>
+                  <a href="#" className="team-social-link" title="Email">
+                    <span>✉️</span>
+                  </a>
+                </div>
+              </div>
 
-                {/* Miembro 4 (Nuevo) */}
-                <div style={{ padding: '10px' }}>
-                  <div style={{
-                    padding: '30px',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    height: '100%'
-                  }} className="card-hover team-card">
-                    <div style={{
-                      width: '120px',
-                      height: '120px',
-                      borderRadius: '50%',
-                      backgroundColor: 'var(--primary)',
-                      color: 'white',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '20px',
-                      fontSize: '40px',
-                      overflow: 'hidden'
-                    }}>
-                      <img src="/team-member-4.jpg" alt="Martín Torres" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.parentNode.innerHTML = 'MT';
-                      }} />
-                    </div>
-                    <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '12px', color: 'var(--theme-text)' }}>
-                      Martín Torres
-                    </h3>
-                    <p style={{ fontSize: '16px', color: 'var(--gray)', marginBottom: '16px' }}>
-                      Especialista en IA y producción audiovisual. Combina tecnología avanzada con narrativas efectivas para crear contenido que conecta y convierte.
-                    </p>
-                  </div>
-                </div>
-              </Slider>
+            
             </div>
           </div>
         </section>
