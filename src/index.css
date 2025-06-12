@@ -1073,3 +1073,38 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
   }
 }
 
+/* Estilos responsivos para la sección de garantía */
+.guarantee-section {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design para Garantía */
+@media (max-width: 768px) {
+  .guarantee-section [style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .guarantee-section [style*="minmax(300px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .guarantee-section {
+    padding: clamp(30px, 6vw, 50px) 0 !important;
+  }
+
+  .guarantee-section [style*="clamp(200px, 40vw, 300px)"] {
+    width: clamp(150px, 35vw, 250px) !important;
+    height: clamp(150px, 35vw, 250px) !important;
+  }
+}
+
+/* Mejoras para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .guarantee-section .container {
+    padding: 0 15px !important;
+  }
+}
+

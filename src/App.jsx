@@ -2660,407 +2660,215 @@ function App() {
           </div>
         </section>
 
-        {/* Guarantee Section */}
-        <section className="section section-themed" style={{
+        {/* Guarantee Section - Completamente Responsiva */}
+        <section className="guarantee-section" style={{
           backgroundColor: 'var(--theme-surface)',
-          position: 'relative',
-          overflow: 'hidden',
-          padding: 'clamp(60px, 10vw, 120px) 0'
+          padding: 'clamp(40px, 8vw, 80px) 0'
         }}>
-          {/* Enhanced Decorative Background Elements */}
-          <div style={{
-            position: 'absolute',
-            top: '10%',
-            left: '-20%',
-            width: '500px',
-            height: '500px',
-            background: 'linear-gradient(135deg, #10b98115, #059f6915)',
-            borderRadius: '50%',
-            filter: 'blur(120px)',
-            animation: 'float 12s ease-in-out infinite',
-            zIndex: 0
-          }}></div>
-          <div style={{
-            position: 'absolute',
-            bottom: '10%',
-            right: '-20%',
-            width: '400px',
-            height: '400px',
-            background: 'linear-gradient(135deg, var(--primary)12, var(--secondary)12)',
-            borderRadius: '50%',
-            filter: 'blur(100px)',
-            animation: 'float 10s ease-in-out infinite reverse',
-            zIndex: 0
-          }}></div>
-          <div style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '300px',
-            height: '300px',
-            background: 'linear-gradient(135deg, var(--accent)08, var(--tertiary)08)',
-            borderRadius: '50%',
-            filter: 'blur(80px)',
-            animation: 'pulse 8s ease-in-out infinite',
-            zIndex: 0
-          }}></div>
-
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            {/* Modern Guarantee Layout */}
+          <div className="container">
+            {/* Header de la sección */}
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'clamp(250px, 35%, 400px) 1fr',
-              gap: 'clamp(30px, 6vw, 60px)',
-              alignItems: 'center',
-              maxWidth: '1200px',
-              margin: '0 auto',
-              background: 'linear-gradient(135deg, var(--theme-card-bg) 0%, var(--theme-surface) 100%)',
-              padding: 'clamp(40px, 8vw, 80px)',
-              borderRadius: '40px',
-              position: 'relative',
-              border: '4px solid transparent',
-              backgroundImage: `
-                linear-gradient(var(--theme-card-bg), var(--theme-surface)),
-                linear-gradient(135deg, #10b981, var(--primary), var(--secondary))
-              `,
-              backgroundOrigin: 'border-box',
-              backgroundClip: 'content-box, border-box',
-              boxShadow: '0 40px 100px rgba(16, 185, 129, 0.15)',
-              overflow: 'hidden'
-            }} className="reveal reveal-up benefit-card">
-
-              {/* Sección de imagen de garantía */}
+              textAlign: 'center',
+              marginBottom: 'clamp(30px, 6vw, 50px)'
+            }}>
               <div style={{
-                position: 'relative',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: 'clamp(20px, 4vw, 30px)'
+                display: 'inline-block',
+                background: '#10b981',
+                color: 'white',
+                padding: '8px 20px',
+                borderRadius: '20px',
+                fontSize: '14px',
+                fontWeight: '600',
+                marginBottom: '20px'
               }}>
-                {/* Imagen principal de garantía */}
+                🛡️ GARANTÍA TOTAL
+              </div>
+              <h2 style={{
+                fontSize: 'clamp(24px, 6vw, 42px)',
+                fontWeight: '800',
+                color: 'var(--theme-text)',
+                marginBottom: '16px',
+                lineHeight: '1.2'
+              }}>
+                Si no aprendes, <span style={{ color: '#10b981' }}>te reembolsamos</span>
+              </h2>
+              <p style={{
+                fontSize: 'clamp(14px, 3vw, 18px)',
+                color: 'var(--theme-text-secondary)',
+                maxWidth: '600px',
+                margin: '0 auto',
+                lineHeight: '1.6'
+              }}>
+                Estamos tan seguros de que transformarás tu negocio que te ofrecemos una garantía completa de 30 días.
+              </p>
+            </div>
+
+            {/* Contenido principal - Diseño moderno y responsivo */}
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 'clamp(30px, 6vw, 50px)',
+              maxWidth: '1200px',
+              margin: '0 auto'
+            }}>
+
+              {/* Imagen central de garantía */}
+              <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginBottom: 'clamp(20px, 4vw, 30px)'
+              }}>
                 <div style={{
-                  width: '100%',
-                  aspectRatio: '1',
-                  borderRadius: '30px',
+                  width: 'clamp(200px, 40vw, 300px)',
+                  height: 'clamp(200px, 40vw, 300px)',
+                  borderRadius: '50%',
                   background: 'linear-gradient(135deg, #10b98120, var(--primary)20)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  border: '3px solid #10b981',
-                  boxShadow: '0 25px 50px rgba(16, 185, 129, 0.3)'
+                  border: '4px solid #10b981',
+                  boxShadow: '0 20px 40px rgba(16, 185, 129, 0.2)',
+                  position: 'relative'
                 }}>
-                  {/* Placeholder para imagen principal */}
                   <div style={{
-                    width: '100%',
-                    height: '100%',
-                    background: 'linear-gradient(135deg, #10b98125, var(--primary)25)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    gap: '10px',
-                    position: 'relative'
+                    textAlign: 'center'
                   }}>
                     <div style={{
-                      position: 'absolute',
-                      inset: '20px',
-                      border: '2px dashed #10b981',
-                      borderRadius: '20px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexDirection: 'column',
-                      gap: '8px'
+                      fontSize: 'clamp(40px, 8vw, 80px)',
+                      marginBottom: '10px'
+                    }}>🛡️</div>
+                    <div style={{
+                      fontSize: 'clamp(14px, 3vw, 18px)',
+                      fontWeight: '700',
+                      color: '#10b981'
                     }}>
-                      <span style={{ fontSize: 'clamp(40px, 8vw, 60px)' }}>🛡️</span>
-                      <span style={{
-                        fontSize: 'clamp(10px, 2vw, 12px)',
-                        fontWeight: '600',
-                        color: '#10b981',
-                        textAlign: 'center'
-                      }}>
-                        Imagen de Garantía
-                      </span>
+                      30 DÍAS
                     </div>
-                  </div>
-
-                  {/* Anillos de confianza */}
-                  <div style={{
-                    position: 'absolute',
-                    inset: '-8px',
-                    borderRadius: '35px',
-                    border: '2px solid #10b981',
-                    opacity: '0.4',
-                    animation: 'pulse 4s infinite'
-                  }}></div>
-                  <div style={{
-                    position: 'absolute',
-                    inset: '-16px',
-                    borderRadius: '40px',
-                    border: '1px solid var(--primary)',
-                    opacity: '0.3',
-                    animation: 'pulse 4s infinite 1.5s'
-                  }}></div>
-                </div>
-
-                {/* Badges de confianza */}
-                <div style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 'clamp(8px, 2vw, 12px)',
-                  width: '100%'
-                }}>
-                  {/* Badge 100% */}
-                  <div style={{
-                    background: 'linear-gradient(135deg, #10b981, #059f69)',
-                    color: 'white',
-                    padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px)',
-                    borderRadius: '20px',
-                    fontSize: 'clamp(12px, 2.5vw, 14px)',
-                    fontWeight: '800',
-                    textAlign: 'center',
-                    textTransform: 'uppercase',
-                    boxShadow: '0 6px 20px rgba(16, 185, 129, 0.4)'
-                  }}>
-                    ✅ 100% Garantizado
-                  </div>
-
-                  {/* Badge 30 días */}
-                  <div style={{
-                    background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
-                    color: 'white',
-                    padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px)',
-                    borderRadius: '20px',
-                    fontSize: 'clamp(12px, 2.5vw, 14px)',
-                    fontWeight: '800',
-                    textAlign: 'center',
-                    textTransform: 'uppercase',
-                    boxShadow: '0 6px 20px rgba(74, 144, 226, 0.4)'
-                  }}>
-                    ⚡ 30 Días
                   </div>
                 </div>
               </div>
 
-              {/* Contenido de texto */}
-              <div style={{ textAlign: 'left' }}>
-                {/* Badge superior */}
+              {/* Grid de características responsivo */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                gap: 'clamp(20px, 4vw, 30px)',
+                marginBottom: 'clamp(30px, 6vw, 40px)'
+              }}>
+
+                {/* Sin Riesgo */}
                 <div style={{
-                  display: 'inline-block',
-                  background: 'linear-gradient(135deg, #10b981, #059f69)',
-                  color: 'white',
-                  padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 28px)',
-                  borderRadius: '30px',
-                  fontSize: 'clamp(12px, 2.5vw, 16px)',
-                  fontWeight: '800',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.5px',
-                  marginBottom: 'clamp(20px, 4vw, 30px)',
-                  boxShadow: '0 10px 30px rgba(16, 185, 129, 0.4)'
-                }}>
-                  🛡️ Garantía Total
-                </div>
-
-                {/* Título principal mejorado */}
-                <h2 style={{
-                  fontSize: 'clamp(28px, 6vw, 48px)',
-                  fontWeight: '900',
-                  marginBottom: 'clamp(16px, 3vw, 24px)',
-                  color: 'var(--theme-text)',
-                  lineHeight: '1.1',
-                  letterSpacing: '-0.02em'
-                }}>
-                  Si no aprendes,{' '}
-                  <span style={{
-                    background: 'linear-gradient(135deg, #10b981, var(--primary))',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
-                  }}>
-                    te reembolsamos
-                  </span>
-                </h2>
-
-                {/* Subtítulo */}
-                <p style={{
-                  fontSize: 'clamp(18px, 3.5vw, 24px)',
-                  fontWeight: '600',
-                  color: 'var(--theme-text)',
-                  marginBottom: 'clamp(24px, 5vw, 40px)',
-                  lineHeight: '1.4'
-                }}>
-                  Así de simple.
-                </p>
-
-                {/* Descripción mejorada */}
-                <p style={{
-                  fontSize: 'clamp(16px, 3vw, 20px)',
-                  marginBottom: 'clamp(30px, 6vw, 50px)',
-                  color: 'var(--theme-text-secondary)',
-                  lineHeight: '1.6',
-                  fontWeight: '500'
-                }}>
-                  Aprende, aplica, crea. Si después de seguir el programa no logras crear tu primer avatar, te devolvemos tu inversión sin preguntas.
-                </p>
-
-                {/* Características de la garantía */}
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                  gap: 'clamp(16px, 3vw, 24px)',
-                  marginBottom: 'clamp(30px, 6vw, 40px)'
-                }}>
-                  {/* Sin Riesgo */}
-                  <div style={{
-                    background: 'linear-gradient(135deg, #10b98110, #059f6910)',
-                    padding: 'clamp(16px, 3vw, 24px)',
-                    borderRadius: '20px',
-                    border: '2px solid #10b981',
-                    textAlign: 'center',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}>
-                    <div style={{ fontSize: 'clamp(24px, 5vw, 32px)', marginBottom: '12px' }}>✅</div>
-                    <h3 style={{
-                      fontSize: 'clamp(14px, 3vw, 18px)',
-                      fontWeight: '700',
-                      marginBottom: '8px',
-                      color: '#10b981'
-                    }}>
-                      Sin Riesgo
-                    </h3>
-                    <p style={{
-                      fontSize: 'clamp(12px, 2.5vw, 14px)',
-                      color: 'var(--theme-text)',
-                      margin: '0',
-                      lineHeight: '1.4'
-                    }}>
-                      Tu inversión está 100% protegida
-                    </p>
-                  </div>
-
-                  {/* Proceso Rápido */}
-                  <div style={{
-                    background: 'linear-gradient(135deg, var(--primary)10, var(--secondary)10)',
-                    padding: 'clamp(16px, 3vw, 24px)',
-                    borderRadius: '20px',
-                    border: '2px solid var(--primary)',
-                    textAlign: 'center',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}>
-                    <div style={{ fontSize: 'clamp(24px, 5vw, 32px)', marginBottom: '12px' }}>⚡</div>
-                    <h3 style={{
-                      fontSize: 'clamp(14px, 3vw, 18px)',
-                      fontWeight: '700',
-                      marginBottom: '8px',
-                      color: 'var(--primary)'
-                    }}>
-                      Proceso Rápido
-                    </h3>
-                    <p style={{
-                      fontSize: 'clamp(12px, 2.5vw, 14px)',
-                      color: 'var(--theme-text)',
-                      margin: '0',
-                      lineHeight: '1.4'
-                    }}>
-                      Reembolso en 24-48 horas
-                    </p>
-                  </div>
-
-                  {/* Sin Preguntas */}
-                  <div style={{
-                    background: 'linear-gradient(135deg, var(--secondary)10, var(--accent)10)',
-                    padding: 'clamp(16px, 3vw, 24px)',
-                    borderRadius: '20px',
-                    border: '2px solid var(--secondary)',
-                    textAlign: 'center',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}>
-                    <div style={{ fontSize: 'clamp(24px, 5vw, 32px)', marginBottom: '12px' }}>🤝</div>
-                    <h3 style={{
-                      fontSize: 'clamp(14px, 3vw, 18px)',
-                      fontWeight: '700',
-                      marginBottom: '8px',
-                      color: 'var(--secondary)'
-                    }}>
-                      Sin Preguntas
-                    </h3>
-                    <p style={{
-                      fontSize: 'clamp(12px, 2.5vw, 14px)',
-                      color: 'var(--theme-text)',
-                      margin: '0',
-                      lineHeight: '1.4'
-                    }}>
-                      Proceso simple y directo
-                    </p>
-                  </div>
-                </div>
-
-                {/* CTA final de garantía */}
-                <div style={{
-                  background: 'linear-gradient(135deg, #10b981, #059f69)',
+                  background: 'var(--theme-card-bg)',
                   padding: 'clamp(20px, 4vw, 30px)',
-                  borderRadius: '25px',
-                  color: 'white',
+                  borderRadius: '16px',
+                  border: '2px solid #10b981',
                   textAlign: 'center',
-                  position: 'relative',
-                  boxShadow: '0 15px 40px rgba(16, 185, 129, 0.3)',
-                  overflow: 'hidden'
+                  boxShadow: '0 8px 25px rgba(16, 185, 129, 0.1)'
                 }}>
-                  {/* Elementos decorativos */}
-                  <div style={{
-                    position: 'absolute',
-                    top: '-10px',
-                    left: '-10px',
-                    width: '30px',
-                    height: '30px',
-                    background: 'rgba(255,255,255,0.2)',
-                    borderRadius: '50%'
-                  }}></div>
-                  <div style={{
-                    position: 'absolute',
-                    bottom: '-15px',
-                    right: '-15px',
-                    width: '40px',
-                    height: '40px',
-                    background: 'rgba(255,255,255,0.1)',
-                    borderRadius: '50%'
-                  }}></div>
+                  <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>✅</div>
+                  <h3 style={{
+                    fontSize: 'clamp(16px, 3vw, 20px)',
+                    fontWeight: '700',
+                    marginBottom: '12px',
+                    color: '#10b981'
+                  }}>
+                    Sin Riesgo
+                  </h3>
+                  <p style={{
+                    fontSize: 'clamp(14px, 2.5vw, 16px)',
+                    color: 'var(--theme-text-secondary)',
+                    margin: '0',
+                    lineHeight: '1.5'
+                  }}>
+                    Tu inversión está 100% protegida. Si no estás satisfecho, te devolvemos tu dinero.
+                  </p>
+                </div>
 
+                {/* Proceso Rápido */}
+                <div style={{
+                  background: 'var(--theme-card-bg)',
+                  padding: 'clamp(20px, 4vw, 30px)',
+                  borderRadius: '16px',
+                  border: '2px solid var(--primary)',
+                  textAlign: 'center',
+                  boxShadow: '0 8px 25px rgba(74, 144, 226, 0.1)'
+                }}>
+                  <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>⚡</div>
+                  <h3 style={{
+                    fontSize: 'clamp(16px, 3vw, 20px)',
+                    fontWeight: '700',
+                    marginBottom: '12px',
+                    color: 'var(--primary)'
+                  }}>
+                    Proceso Rápido
+                  </h3>
+                  <p style={{
+                    fontSize: 'clamp(14px, 2.5vw, 16px)',
+                    color: 'var(--theme-text-secondary)',
+                    margin: '0',
+                    lineHeight: '1.5'
+                  }}>
+                    Reembolso procesado en 24-48 horas. Sin complicaciones ni demoras.
+                  </p>
+                </div>
+
+                {/* Sin Preguntas */}
+                <div style={{
+                  background: 'var(--theme-card-bg)',
+                  padding: 'clamp(20px, 4vw, 30px)',
+                  borderRadius: '16px',
+                  border: '2px solid var(--secondary)',
+                  textAlign: 'center',
+                  boxShadow: '0 8px 25px rgba(228, 105, 148, 0.1)'
+                }}>
+                  <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>🤝</div>
+                  <h3 style={{
+                    fontSize: 'clamp(16px, 3vw, 20px)',
+                    fontWeight: '700',
+                    marginBottom: '12px',
+                    color: 'var(--secondary)'
+                  }}>
+                    Sin Preguntas
+                  </h3>
+                  <p style={{
+                    fontSize: 'clamp(14px, 2.5vw, 16px)',
+                    color: 'var(--theme-text-secondary)',
+                    margin: '0',
+                    lineHeight: '1.5'
+                  }}>
+                    Proceso simple y directo. Solo necesitas solicitar el reembolso.
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA final */}
+              <div style={{
+                textAlign: 'center'
+              }}>
+                <div style={{
+                  background: '#10b981',
+                  color: 'white',
+                  padding: 'clamp(20px, 4vw, 30px)',
+                  borderRadius: '20px',
+                  maxWidth: '600px',
+                  margin: '0 auto',
+                  boxShadow: '0 12px 30px rgba(16, 185, 129, 0.3)'
+                }}>
                   <p style={{
                     fontSize: 'clamp(16px, 3.5vw, 22px)',
-                    fontWeight: '800',
+                    fontWeight: '700',
                     margin: '0',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.5px',
-                    position: 'relative',
-                    zIndex: 1
+                    letterSpacing: '0.5px'
                   }}>
                     🛡️ Garantía de 30 días - Sin riesgo
                   </p>
                 </div>
               </div>
-
-              {/* Responsive: Layout vertical en móviles */}
-              <style jsx>{`
-                @media (max-width: 768px) {
-                  div[style*="gridTemplateColumns"] {
-                    grid-template-columns: 1fr !important;
-                    text-align: center !important;
-                  }
-                  div[style*="textAlign: 'left'"] {
-                    text-align: center !important;
-                  }
-                }
-              `}</style>
             </div>
           </div>
         </section>
+
+
 
         {/* CTA Section */}
         <section id="cta" className="section section-themed" style={{ backgroundColor: 'var(--theme-surface)', color: 'var(--theme-text)' }}>
@@ -4607,7 +4415,6 @@ function App() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '12px',
-                    background: 'linear-gradient(135deg, var(--primary)15, var(--secondary)15)',
                     padding: 'clamp(12px, 2.5vw, 20px) clamp(20px, 4vw, 32px)',
                     borderRadius: '50px',
                     border: '1px solid var(--primary)25',
