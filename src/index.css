@@ -231,12 +231,12 @@ header {
   box-shadow: 0 6px 20px rgba(214, 95, 171, 0.25);
 }
 
-/* Hero Section con imagen de fondo y degradado */
+/* Hero Section con imagen de fondo y degradado tecnológico */
 .hero {
   padding-top: 120px;
   padding-bottom: 80px;
   background:
-    linear-gradient(180deg, rgba(154, 218, 251, 0.85) 0%, rgba(228, 105, 148, 0.85) 100%),
+    linear-gradient(135deg, rgba(74, 144, 226, 0.9) 0%, rgba(154, 218, 251, 0.8) 25%, rgba(228, 105, 148, 0.8) 75%, rgba(200, 162, 200, 0.9) 100%),
     url('/fondos/fondo.png');
   background-size: cover;
   background-position: center;
@@ -291,6 +291,132 @@ header {
   50% { transform: translateY(-20px) rotate(5deg); }
 }
 
+/* Partículas tecnológicas */
+.tech-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, #4A90E2, #9ADAFB);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.8);
+}
+
+.particle-1 {
+  top: 20%;
+  left: 10%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.particle-2 {
+  top: 60%;
+  left: 80%;
+  animation: float 4s ease-in-out infinite reverse;
+}
+
+.particle-3 {
+  top: 30%;
+  left: 70%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.particle-4 {
+  top: 80%;
+  left: 20%;
+  animation: float 3.5s ease-in-out infinite reverse;
+}
+
+.particle-5 {
+  top: 50%;
+  left: 50%;
+  animation: float 4.5s ease-in-out infinite;
+}
+
+/* Líneas de código flotantes */
+.floating-code {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.1;
+}
+
+.code-line {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #4A90E2;
+  text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+  animation: codeFloat 8s ease-in-out infinite;
+}
+
+.code-line-1 {
+  top: 15%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.code-line-2 {
+  top: 40%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.code-line-3 {
+  top: 70%;
+  left: 15%;
+  animation-delay: 4s;
+}
+
+.code-line-4 {
+  top: 85%;
+  right: 20%;
+  animation-delay: 6s;
+}
+
+@keyframes codeFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-10px) translateX(5px);
+    opacity: 0.3;
+  }
+}
+
+/* Grid tecnológico de fondo */
+.tech-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(74, 144, 226, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -298,37 +424,93 @@ header {
   align-items: center;
 }
 
-.hero-badge {
-  display: inline-block;
-  padding: 10px 24px;
-  background-color: var(--accent-alt);
+/* Badge tecnológico mejorado */
+.hero-badge-tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(228, 105, 148, 0.9));
   color: var(--white);
   border-radius: 9999px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 24px;
   font-size: 14px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(214, 95, 171, 0.3);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 4px 15px rgba(74, 144, 226, 0.4),
+    0 0 30px rgba(228, 105, 148, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
-.hero-title {
+.hero-badge-tech .badge-icon {
+  font-size: 16px;
+  animation: bounce 2s ease infinite;
+}
+
+.hero-badge-tech .badge-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s ease infinite;
+  transform: rotate(45deg);
+}
+
+/* Título tecnológico con gradientes */
+.hero-title-tech {
   font-size: 36px;
   margin-bottom: 24px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 10;
+  line-height: 1.2;
 }
 
-.hero-description {
+.text-gradient {
+  background: linear-gradient(135deg, #4A90E2, #9ADAFB, #E46994);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+  font-weight: 800;
+}
+
+.text-highlight {
+  color: #9ADAFB;
+  text-shadow: 0 0 20px rgba(154, 218, 251, 0.6);
+  font-weight: 700;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Descripción tecnológica */
+.hero-description-tech {
   font-size: 18px;
   margin-bottom: 32px;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 10;
+  line-height: 1.6;
+}
+
+.tech-highlight {
+  color: #4A90E2;
+  text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+  font-weight: 600;
 }
 
 .countdown-container {
@@ -375,46 +557,284 @@ header {
   margin-top: 4px;
 }
 
-.video-container {
+/* Sección de video tecnológica */
+.video-section-tech {
   position: relative;
-  aspect-ratio: 9/16; /* Formato vertical tipo Instagram */
-  width: 100%; /* Ancho completo para responsividad */
-  max-width: 400px; /* Ancho máximo en pantallas grandes */
-  height: auto; /* Altura automática basada en aspect-ratio */
-  margin: 0 auto; /* Centrar el contenedor */
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para el video */
-  border-radius: 12px; /* Bordes redondeados como en Instagram */
+}
+
+/* Efectos holográficos */
+.hologram-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.holo-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 50%;
+  animation: holoRotate 8s linear infinite;
+}
+
+.holo-ring-1 {
+  width: 100%;
+  height: 100%;
+  animation-duration: 8s;
+}
+
+.holo-ring-2 {
+  width: 110%;
+  height: 110%;
+  animation-duration: 12s;
+  animation-direction: reverse;
+}
+
+.holo-ring-3 {
+  width: 120%;
+  height: 120%;
+  animation-duration: 16s;
+}
+
+@keyframes holoRotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Contenedor de video tecnológico */
+.video-container-tech {
+  position: relative;
+  aspect-ratio: 9/16;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(74, 144, 226, 0.1));
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(74, 144, 226, 0.3);
-  overflow: hidden; /* Para asegurar que el contenido respete los bordes redondeados */
-  box-shadow: 0 10px 30px rgba(74, 144, 226, 0.2);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(74, 144, 226, 0.3),
+    0 0 50px rgba(228, 105, 148, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   z-index: 10;
 }
 
-.stat-badge {
+.video-container-tech::before {
+  content: '';
   position: absolute;
-  background-color: var(--theme-badge-bg);
-  color: var(--theme-badge-text);
-  padding: 12px 16px;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.15), 0 4px 10px rgba(74, 144, 226, 0.1);
-  min-width: 150px;
-  text-align: center;
-  border: 2px solid var(--primary);
-  transition: all 0.3s ease; /* Transición suave para cambios responsivos */
-  backdrop-filter: blur(10px);
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #4A90E2, #9ADAFB, #E46994, #C8A2C8);
+  background-size: 400% 400%;
+  border-radius: 18px;
+  z-index: -1;
+  animation: gradientBorder 4s ease infinite;
+}
+
+@keyframes gradientBorder {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Línea de escaneo */
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4A90E2, transparent);
+  animation: scan 3s ease infinite;
+  z-index: 5;
+}
+
+@keyframes scan {
+  0% { transform: translateY(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(400px); opacity: 0; }
+}
+
+/* Avatar tecnológico */
+.tech-avatar {
+  animation: avatarGlow 2s ease infinite alternate;
+}
+
+@keyframes avatarGlow {
+  0% { box-shadow: 0 0 15px rgba(74, 144, 226, 0.5); }
+  100% { box-shadow: 0 0 25px rgba(74, 144, 226, 0.8), 0 0 35px rgba(154, 218, 251, 0.4); }
+}
+
+/* Partículas del video */
+.video-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.video-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: linear-gradient(45deg, #9ADAFB, #4A90E2);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(154, 218, 251, 0.8);
+}
+
+.video-particle-1 {
+  top: 20%;
+  left: 15%;
+  animation: particleFloat 4s ease-in-out infinite;
+}
+
+.video-particle-2 {
+  top: 60%;
+  right: 20%;
+  animation: particleFloat 5s ease-in-out infinite reverse;
+}
+
+.video-particle-3 {
+  bottom: 30%;
+  left: 70%;
+  animation: particleFloat 6s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-15px) translateX(10px);
+    opacity: 1;
+  }
+}
+
+/* Iconos tecnológicos interactivos */
+.tech-icon {
+  transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+/* Badges estadísticos tecnológicos */
+.stat-badge-tech {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(74, 144, 226, 0.2));
+  border: 1px solid rgba(74, 144, 226, 0.4);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow:
+    0 8px 32px rgba(74, 144, 226, 0.2),
+    0 0 20px rgba(154, 218, 251, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
   z-index: 10;
 }
 
-.stat-value {
-  font-weight: 700;
-  font-size: 20px;
+.badge-tech-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  position: relative;
+  z-index: 2;
 }
 
-.stat-label {
-  font-size: 14px;
+.badge-icon-tech {
+  font-size: 24px;
+  filter: drop-shadow(0 0 8px rgba(74, 144, 226, 0.6));
+  animation: iconPulse 2s ease infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.stat-value-tech {
+  font-weight: 800;
+  font-size: 22px;
+  color: #9ADAFB;
+  text-shadow: 0 0 10px rgba(154, 218, 251, 0.5);
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-label-tech {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-tech-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(74, 144, 226, 0.1) 0%, transparent 70%);
+  animation: glowPulse 3s ease infinite;
+  z-index: 1;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.badge-tech-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  background: linear-gradient(45deg, #4A90E2, #9ADAFB, #E46994, #C8A2C8);
+  background-size: 400% 400%;
+  animation: borderGlow 4s ease infinite;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+@keyframes borderGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.stat-badge-tech:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 40px rgba(74, 144, 226, 0.3),
+    0 0 30px rgba(154, 218, 251, 0.2);
+}
+
+/* Contenedor de badges tecnológicos */
+.stats-badges-container-tech {
+  position: relative;
 }
 
 /* Floating Button */
@@ -730,14 +1150,27 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     padding-bottom: 60px;
   }
 
-  .hero-title {
+  .hero-title-tech {
     font-size: 28px;
     margin-bottom: 15px;
   }
 
-  .hero-description {
+  .hero-description-tech {
     font-size: 16px;
     margin-bottom: 20px;
+  }
+
+  /* Ajustes para elementos tecnológicos en móvil */
+  .tech-particles {
+    display: none; /* Ocultar partículas en móvil para mejor rendimiento */
+  }
+
+  .floating-code {
+    display: none; /* Ocultar código flotante en móvil */
+  }
+
+  .hologram-effect {
+    display: none; /* Ocultar efectos holográficos en móvil */
   }
 
   .countdown-grid {
@@ -754,23 +1187,23 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     font-size: 24px;
   }
 
-  .video-container {
+  .video-container-tech {
     max-width: 280px;
     min-height: 450px;
   }
 
-  .video-section {
+  .video-section-tech {
     margin-right: 0 !important;
   }
 
-  .stats-badges-container {
+  .stats-badges-container-tech {
     position: static !important;
     margin-top: 20px !important;
     flex-direction: column !important;
     align-items: center !important;
   }
 
-  .stat-badge {
+  .stat-badge-tech {
     position: relative !important;
     top: auto !important;
     right: auto !important;
@@ -838,11 +1271,11 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
 
 /* Dispositivos pequeños (tablets verticales, 576px y más) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .hero-title {
+  .hero-title-tech {
     font-size: 32px;
   }
 
-  .video-container {
+  .video-container-tech {
     max-width: 320px;
     min-height: 500px;
   }
@@ -852,11 +1285,11 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     height: 70px;
   }
 
-  .video-section {
+  .video-section-tech {
     margin-right: 0 !important;
   }
 
-  .stats-badges-container {
+  .stats-badges-container-tech {
     position: static !important;
     margin-top: 20px !important;
     flex-direction: row !important;
@@ -864,11 +1297,21 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     gap: 20px !important;
   }
 
-  .stat-badge {
+  .stat-badge-tech {
     position: relative !important;
     top: auto !important;
     right: auto !important;
     margin: 0 !important;
+  }
+
+  /* Mostrar algunos efectos en tablets */
+  .tech-particles {
+    display: block;
+  }
+
+  .particle {
+    width: 3px;
+    height: 3px;
   }
 
   .team-carousel .slick-prev {
@@ -919,24 +1362,24 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     gap: 30px;
   }
 
-  .hero-title {
+  .hero-title-tech {
     font-size: 36px;
   }
 
-  .video-container {
+  .video-container-tech {
     max-width: 350px;
     min-height: 550px;
   }
 
-  /* Restaurar la posición original de los badges estadísticos en tablets horizontales */
-  .stats-badges-container {
+  /* Restaurar la posición original de los badges estadísticos tecnológicos en tablets horizontales */
+  .stats-badges-container-tech {
     position: absolute !important;
     top: 10px !important;
     right: -80px !important;
   }
 
-  /* Primer badge */
-  .stats-badges-container .stat-badge:first-child {
+  /* Primer badge tecnológico */
+  .stats-badges-container-tech .stat-badge-tech:first-child {
     top: 10px !important;
     right: 0 !important;
     left: auto !important;
@@ -997,28 +1440,36 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero-title {
+  .hero-title-tech {
     font-size: 48px;
   }
 
-  /* Restaurar la posición original de los badges estadísticos en PC */
-  .stats-badges-container {
+  /* Restaurar la posición original de los badges estadísticos tecnológicos en PC */
+  .stats-badges-container-tech {
     position: absolute !important;
     top: 10px !important;
     right: -80px !important;
   }
 
-  /* Primer badge */
-  .stats-badges-container .stat-badge:first-child {
+  /* Primer badge tecnológico */
+  .stats-badges-container-tech .stat-badge-tech:first-child {
     top: 10px !important;
     right: 0 !important;
     left: auto !important;
     position: absolute !important;
   }
 
-  /* Segundo badge */
-  .stats-badges-container .stat-badge:last-child {
-    top: 100px !important;
+  /* Segundo badge tecnológico */
+  .stats-badges-container-tech .stat-badge-tech:nth-child(2) {
+    top: 120px !important;
+    right: 0 !important;
+    left: auto !important;
+    position: absolute !important;
+  }
+
+  /* Tercer badge tecnológico */
+  .stats-badges-container-tech .stat-badge-tech:last-child {
+    top: 240px !important;
     right: 0 !important;
     left: auto !important;
     position: absolute !important;
@@ -1060,131 +1511,16 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
   }
 }
 
-/* Estilos para la sección de beneficios - 2 por fila */
+/* Estilos para la sección de beneficios */
 .news-style-benefits {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 35px;
-  align-items: stretch;
 }
 
-/* Asegurar que todas las tarjetas tengan la misma altura */
-.news-style-benefits .benefit-article {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.news-style-benefits .benefit-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.news-style-benefits .benefit-description {
-  flex: 1;
-}
-
-/* Responsive para tablets */
-@media (max-width: 768px) and (min-width: 601px) {
+@media (min-width: 768px) {
   .news-style-benefits {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 25px;
-  }
-}
-
-/* Mobile - cambiar a 1 columna */
-@media (max-width: 600px) {
-  .news-style-benefits {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    gap: 25px;
-  }
-}
-
-/* Estilos responsivos para FAQ Container */
-#faq-container {
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  #faq-container {
-    padding: clamp(30px, 6vw, 50px) clamp(15px, 4vw, 25px) !important;
-    margin: 0 15px !important;
-    border-radius: clamp(20px, 4vw, 30px) !important;
-  }
-}
-
-@media (max-width: 600px) {
-  #faq-container {
-    padding: clamp(25px, 5vw, 40px) clamp(12px, 3vw, 20px) !important;
-    margin: 0 10px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  #faq-container {
-    padding: 25px 15px !important;
-    margin: 0 8px !important;
-    border-radius: 20px !important;
-  }
-}
-
-/* Estilos responsivos para la sección de iconos - 2 filas */
-#iconos {
-  transition: all 0.3s ease;
-}
-
-/* Desktop y tablet grande - 2x2 grid */
-@media (min-width: 769px) {
-  #iconos {
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important;
-    gap: clamp(20px, 4vw, 30px) !important;
-  }
-}
-
-/* Tablet mediano - 2x2 grid con menos espacio */
-@media (max-width: 768px) and (min-width: 601px) {
-  #iconos {
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important;
-    gap: clamp(16px, 3vw, 24px) !important;
-  }
-
-  #iconos > div {
-    min-height: clamp(180px, 20vw, 200px) !important;
-    padding: clamp(18px, 3vw, 22px) !important;
-  }
-}
-
-/* Mobile - 1 columna, 4 filas */
-@media (max-width: 600px) {
-  #iconos {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: repeat(4, 1fr) !important;
-    gap: 20px !important;
-    padding: 20px 0 !important;
-  }
-
-  #iconos > div {
-    min-height: clamp(160px, 18vw, 180px) !important;
-    padding: clamp(18px, 3vw, 20px) !important;
-  }
-}
-
-/* Mobile pequeño - diseño compacto */
-@media (max-width: 480px) {
-  #iconos {
-    gap: 16px !important;
-    padding: 16px 0 !important;
-  }
-
-  #iconos > div {
-    min-height: 140px !important;
-    padding: 16px !important;
   }
 }
 
