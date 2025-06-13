@@ -1060,51 +1060,131 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
   }
 }
 
-/* Estilos para la sección de beneficios */
+/* Estilos para la sección de beneficios - 2 por fila */
 .news-style-benefits {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 35px;
+  align-items: stretch;
 }
 
-@media (min-width: 768px) {
+/* Asegurar que todas las tarjetas tengan la misma altura */
+.news-style-benefits .benefit-article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.news-style-benefits .benefit-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-style-benefits .benefit-description {
+  flex: 1;
+}
+
+/* Responsive para tablets */
+@media (max-width: 768px) and (min-width: 601px) {
   .news-style-benefits {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
   }
 }
 
-/* Estilos responsivos para la sección de garantía */
-.guarantee-section {
+/* Mobile - cambiar a 1 columna */
+@media (max-width: 600px) {
+  .news-style-benefits {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 25px;
+  }
+}
+
+/* Estilos responsivos para FAQ Container */
+#faq-container {
   transition: all 0.3s ease;
 }
 
-/* Responsive Design para Garantía */
 @media (max-width: 768px) {
-  .guarantee-section [style*="gridTemplateColumns"] {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-
-  .guarantee-section [style*="minmax(300px, 1fr)"] {
-    grid-template-columns: 1fr !important;
+  #faq-container {
+    padding: clamp(30px, 6vw, 50px) clamp(15px, 4vw, 25px) !important;
+    margin: 0 15px !important;
+    border-radius: clamp(20px, 4vw, 30px) !important;
   }
 }
 
 @media (max-width: 600px) {
-  .guarantee-section {
-    padding: clamp(30px, 6vw, 50px) 0 !important;
-  }
-
-  .guarantee-section [style*="clamp(200px, 40vw, 300px)"] {
-    width: clamp(150px, 35vw, 250px) !important;
-    height: clamp(150px, 35vw, 250px) !important;
+  #faq-container {
+    padding: clamp(25px, 5vw, 40px) clamp(12px, 3vw, 20px) !important;
+    margin: 0 10px !important;
   }
 }
 
-/* Mejoras para pantallas muy pequeñas */
 @media (max-width: 480px) {
-  .guarantee-section .container {
-    padding: 0 15px !important;
+  #faq-container {
+    padding: 25px 15px !important;
+    margin: 0 8px !important;
+    border-radius: 20px !important;
+  }
+}
+
+/* Estilos responsivos para la sección de iconos - 2 filas */
+#iconos {
+  transition: all 0.3s ease;
+}
+
+/* Desktop y tablet grande - 2x2 grid */
+@media (min-width: 769px) {
+  #iconos {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    gap: clamp(20px, 4vw, 30px) !important;
+  }
+}
+
+/* Tablet mediano - 2x2 grid con menos espacio */
+@media (max-width: 768px) and (min-width: 601px) {
+  #iconos {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    gap: clamp(16px, 3vw, 24px) !important;
+  }
+
+  #iconos > div {
+    min-height: clamp(180px, 20vw, 200px) !important;
+    padding: clamp(18px, 3vw, 22px) !important;
+  }
+}
+
+/* Mobile - 1 columna, 4 filas */
+@media (max-width: 600px) {
+  #iconos {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    padding: 20px 0 !important;
+  }
+
+  #iconos > div {
+    min-height: clamp(160px, 18vw, 180px) !important;
+    padding: clamp(18px, 3vw, 20px) !important;
+  }
+}
+
+/* Mobile pequeño - diseño compacto */
+@media (max-width: 480px) {
+  #iconos {
+    gap: 16px !important;
+    padding: 16px 0 !important;
+  }
+
+  #iconos > div {
+    min-height: 140px !important;
+    padding: 16px !important;
   }
 }
 

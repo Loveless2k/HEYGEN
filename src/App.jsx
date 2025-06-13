@@ -1052,7 +1052,7 @@ function App() {
               </article>
 
               {/* Artículo 4 - Innovación */}
-              <article className="benefit-article enhanced-hover reveal reveal-left featured" style={{
+              <article className="benefit-article enhanced-hover reveal reveal-left " style={{
                 transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                 borderRadius: '20px',
                 overflow: 'hidden',
@@ -1703,10 +1703,7 @@ function App() {
                 position: 'relative',
                 overflow: 'hidden',
                 border: '2px solid transparent',
-                backgroundImage: `
-                  linear-gradient(var(--theme-card-bg), var(--theme-surface)),
-                  linear-gradient(135deg, var(--primary), var(--secondary), var(--tertiary))
-                `,
+              
                 backgroundOrigin: 'border-box',
                 backgroundClip: 'content-box, border-box',
                 boxShadow: '0 25px 60px rgba(74, 144, 226, 0.15)',
@@ -2728,23 +2725,42 @@ function App() {
                   justifyContent: 'center',
                   border: '4px solid #10b981',
                   boxShadow: '0 20px 40px rgba(16, 185, 129, 0.2)',
-                  position: 'relative'
+                  position: 'relative',
+                  overflow: 'hidden'
                 }}>
-                  <div style={{
-                    textAlign: 'center'
-                  }}>
-                    <div style={{
-                      fontSize: 'clamp(40px, 8vw, 80px)',
-                      marginBottom: '10px'
-                    }}>🛡️</div>
-                    <div style={{
-                      fontSize: 'clamp(14px, 3vw, 18px)',
-                      fontWeight: '700',
-                      color: '#10b981'
-                    }}>
-                      30 DÍAS
-                    </div>
-                  </div>
+                  <img 
+                    src="./bonos/30-dias.png"
+                    alt="Garantía de 30 días"
+                    style={{
+                      width: '90%',
+                      height: '90%',
+                      objectFit: 'contain'
+                    }}
+                    onError={(e) => {
+                      // Fallback si la imagen no carga
+                      e.target.style.display = 'none';
+                      const fallback = document.createElement('div');
+                      fallback.style.cssText = `
+                        text-align: center;
+                      `;
+                      const icon = document.createElement('div');
+                      icon.style.cssText = `
+                        font-size: clamp(40px, 8vw, 80px);
+                        margin-bottom: 10px;
+                      `;
+                      icon.textContent = '🛡️';
+                      const text = document.createElement('div');
+                      text.style.cssText = `
+                        font-size: clamp(14px, 3vw, 18px);
+                        font-weight: 700;
+                        color: #10b981;
+                      `;
+                      text.textContent = '30 DÍAS';
+                      fallback.appendChild(icon);
+                      fallback.appendChild(text);
+                      e.target.parentNode.appendChild(fallback);
+                    }}
+                  />
                 </div>
               </div>
 
@@ -2874,66 +2890,532 @@ function App() {
         <section id="cta" className="section section-themed" style={{ backgroundColor: 'var(--theme-surface)', color: 'var(--theme-text)' }}>
           <div className="container">
             <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-              <h2 style={{ fontSize: '32px', marginBottom: '24px', fontWeight: '700' }} className="reveal reveal-up">🔥 LANZA TU PRIMER AVATAR RENTABLE CON IA Y EMPIEZA A MONETIZAR</h2>
-
-              <div style={{ backgroundColor: 'var(--theme-card-bg)', border: '1px solid var(--theme-border)', padding: '30px', borderRadius: '8px', margin: '0 auto 32px', maxWidth: '700px' }} className="reveal reveal-up delay-200">
-                <p style={{ textAlign: 'center', marginBottom: '20px', fontSize: '20px', fontWeight: '700', color: 'var(--theme-text)' }}>EN SOLO 90 MINUTOS, TENDRÁS TODO LO NECESARIO PARA:</p>
-                <ul style={{ textAlign: 'left', maxWidth: '600px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <span style={{ color: 'var(--accent)', fontWeight: '700', fontSize: '20px' }}>✅</span>
-                    <span style={{ fontSize: '18px', lineHeight: '1.4', color: 'var(--theme-text)' }}>Crear tu avatar profesional con IA, listo para captar la atención.</span>
-                  </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <span style={{ color: 'var(--accent)', fontWeight: '700', fontSize: '20px' }}>✅</span>
-                    <span style={{ fontSize: '18px', lineHeight: '1.4', color: 'var(--theme-text)' }}>Dominar estrategias claras para monetizarlo desde el primer día.</span>
-                  </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <span style={{ color: 'var(--accent)', fontWeight: '700', fontSize: '20px' }}>✅</span>
-                    <span style={{ fontSize: '18px', lineHeight: '1.4', color: 'var(--theme-text)' }}>Posicionarte y destacar con una herramienta innovadora en el mercado digital.</span>
-                  </li>
-                </ul>
+              <div className="reveal reveal-up" style={{
+                marginBottom: 'clamp(30px, 6vw, 50px)',
+                position: 'relative'
+              }}>
+                {/* Decoración de fondo */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-15px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: '80px',
+                  height: '80px',
+                  background: 'radial-gradient(circle, rgba(255, 59, 48, 0.15) 0%, transparent 70%)',
+                  borderRadius: '50%',
+                  zIndex: '0'
+                }}></div>
+                
+                {/* Icono de fuego con animación */}
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '60px',
+                  height: '60px',
+                  borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #FF3B30, #FF9500)',
+                  boxShadow: '0 10px 25px rgba(255, 59, 48, 0.3)',
+                  marginBottom: '20px',
+                  position: 'relative',
+                  animation: 'pulse 2s infinite'
+                }}>
+                  <span style={{ fontSize: '30px' }}>🔥</span>
+                </div>
+                
+                <h2 style={{ 
+                  fontSize: 'clamp(24px, 5vw, 38px)', 
+                  fontWeight: '900', 
+                  marginBottom: '15px',
+                  background: 'linear-gradient(135deg, #FF3B30, #FF9500)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px',
+                  lineHeight: '1.2',
+                  textShadow: '0 2px 10px rgba(255, 59, 48, 0.1)',
+                  position: 'relative',
+                  zIndex: '1',
+                  padding: '0 clamp(10px, 3vw, 30px)'
+                }}>
+                  LANZA TU PRIMER AVATAR RENTABLE CON IA
+                </h2>
+                
+                <div style={{
+                  fontSize: 'clamp(18px, 3vw, 22px)',
+                  fontWeight: '700',
+                  color: 'var(--theme-text)',
+                  marginBottom: '10px',
+                  position: 'relative',
+                  zIndex: '1'
+                }}>
+                  Y EMPIEZA A <span style={{
+                    background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    fontWeight: '800'
+                  }}>MONETIZAR HOY MISMO</span>
+                </div>
+                
+                {/* Línea decorativa */}
+                <div style={{
+                  width: '120px',
+                  height: '4px',
+                  background: 'linear-gradient(90deg, #FF3B30, #FF9500)',
+                  margin: '20px auto 0',
+                  borderRadius: '2px'
+                }}></div>
               </div>
 
-              <div style={{ fontSize: '18px', marginBottom: '24px', lineHeight: '1.6', color: 'var(--theme-text)' }}>
-                <p style={{ marginBottom: '12px' }}>
-                  <span style={{ fontWeight: '600' }}>💸 Oferta Exclusiva por Tiempo Limitado:</span>
-                </p>
-                <p style={{ marginBottom: '12px' }}>
-                  De <span style={{ textDecoration: 'line-through', color: 'var(--theme-text-secondary)' }}>$100 USD</span> a solo <span style={{ fontSize: '24px', fontWeight: '700', color: 'var(--accent)' }}>$30 USD</span> <span style={{ fontWeight: '600', color: 'var(--accent)' }}>(¡Ahorra 70% Hoy!)</span>
-                </p>
-                <p style={{ marginBottom: '12px' }}>
-                  🎁 Incluye 3 Bonos de Acción Rápida (valorados en $50 USD) + Nuestra Garantía Total de Satisfacción.
-                </p>
-                <p style={{ fontSize: '20px', fontWeight: '700', color: 'var(--accent)' }}>
-                  👉 ¡Asegura Tu Cupo y Empieza a Generar Ingresos con IA!
-                </p>
-              </div>
-
-              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }} className="reveal reveal-up delay-300">
-                <div className="countdown-grid">
-                  <div className="countdown-item animate-scaleIn delay-400">
-                    <div className="countdown-box animate-pulse-highlight" style={{ backgroundColor: 'var(--theme-card-bg)', border: '2px solid var(--primary)' }}>
-                      <span className="countdown-value" style={{ color: 'var(--theme-text)' }}>{timeLeft.days.toString().padStart(2, '0')}</span>
+              <div id="en-solo-90-minutos" style={{
+                backgroundColor: 'var(--theme-card-bg)',
+                border: '2px solid transparent',
+                backgroundImage: `
+                  linear-gradient(var(--theme-card-bg), var(--theme-card-bg)), 
+                  linear-gradient(135deg, var(--primary)40, var(--accent)40)
+                `,
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'content-box, border-box',
+                padding: 'clamp(25px, 5vw, 40px)',
+                borderRadius: '20px',
+                margin: '0 auto 40px',
+                maxWidth: '700px',
+                boxShadow: '0 20px 40px var(--theme-shadow), 0 10px 20px rgba(74, 144, 226, 0.08)',
+                position: 'relative',
+                overflow: 'hidden',
+                transform: 'translateY(20px)',
+                opacity: '0',
+                animation: 'fadeInUp 0.8s ease-out forwards'
+              }} className="reveal reveal-up delay-200">
+                {/* Elementos decorativos de fondo */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-50px',
+                  right: '-50px',
+                  width: '150px',
+                  height: '150px',
+                  background: 'radial-gradient(circle, rgba(74, 144, 226, 0.08) 0%, transparent 70%)',
+                  borderRadius: '50%',
+                  zIndex: '0'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '-30px',
+                  left: '-30px',
+                  width: '120px',
+                  height: '120px',
+                  background: 'radial-gradient(circle, rgba(228, 105, 148, 0.08) 0%, transparent 70%)',
+                  borderRadius: '50%',
+                  zIndex: '0'
+                }}></div>
+                
+                {/* Contenido con posición relativa para estar por encima de los elementos decorativos */}
+                <div style={{ position: 'relative', zIndex: '1' }}>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '25px'
+                  }}>
+                    <div style={{
+                      width: '60px',
+                      height: '60px',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, var(--primary), var(--accent))',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 10px 25px rgba(74, 144, 226, 0.25)',
+                      marginRight: '15px'
+                    }}>
+                      <span style={{ fontSize: '28px', color: 'white' }}>⏱️</span>
                     </div>
-                    <span className="countdown-label" style={{ color: 'var(--theme-text)' }}>Días</span>
+                    <p style={{ 
+                      textAlign: 'left', 
+                      fontSize: 'clamp(18px, 3vw, 22px)', 
+                      fontWeight: '800', 
+                      color: 'var(--theme-text)',
+                      margin: '0',
+                      background: 'linear-gradient(135deg, var(--primary), var(--accent))',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px'
+                    }}>
+                      EN SOLO 90 MINUTOS
+                    </p>
+                  </div>
+                  
+                  <p style={{ 
+                    textAlign: 'center', 
+                    marginBottom: '25px', 
+                    fontSize: 'clamp(16px, 2.5vw, 20px)', 
+                    fontWeight: '700', 
+                    color: 'var(--theme-text)'
+                  }}>
+                    TENDRÁS TODO LO NECESARIO PARA:
+                  </p>
+                  
+                  <ul style={{ 
+                    textAlign: 'left', 
+                    maxWidth: '600px', 
+                    margin: '0 auto', 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    gap: '16px',
+                    padding: '0'
+                  }}>
+                    <li style={{ 
+                      display: 'flex', 
+                      alignItems: 'flex-start', 
+                      gap: '15px',
+                      padding: '12px 15px',
+                      borderRadius: '12px',
+                      background: 'rgba(74, 144, 226, 0.05)',
+                      transition: 'all 0.3s ease',
+                      border: '1px solid rgba(74, 144, 226, 0.1)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(74, 144, 226, 0.1)';
+                      e.currentTarget.style.transform = 'translateX(5px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(74, 144, 226, 0.05)';
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}>
+                      <span style={{ 
+                        color: 'var(--accent)', 
+                        fontWeight: '700', 
+                        fontSize: '22px',
+                        flexShrink: '0',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '30px',
+                        height: '30px',
+                        background: 'rgba(228, 105, 148, 0.1)',
+                        borderRadius: '50%'
+                      }}>✅</span>
+                      <span style={{ 
+                        fontSize: 'clamp(16px, 2.5vw, 18px)', 
+                        lineHeight: '1.5', 
+                        color: 'var(--theme-text)'
+                      }}>
+                        Crear tu avatar profesional con IA, listo para captar la atención.
+                      </span>
+                    </li>
+                    <li style={{ 
+                      display: 'flex', 
+                      alignItems: 'flex-start', 
+                      gap: '15px',
+                      padding: '12px 15px',
+                      borderRadius: '12px',
+                      background: 'rgba(74, 144, 226, 0.05)',
+                      transition: 'all 0.3s ease',
+                      border: '1px solid rgba(74, 144, 226, 0.1)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(74, 144, 226, 0.1)';
+                      e.currentTarget.style.transform = 'translateX(5px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(74, 144, 226, 0.05)';
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}>
+                      <span style={{ 
+                        color: 'var(--accent)', 
+                        fontWeight: '700', 
+                        fontSize: '22px',
+                        flexShrink: '0',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '30px',
+                        height: '30px',
+                        background: 'rgba(228, 105, 148, 0.1)',
+                        borderRadius: '50%'
+                      }}>✅</span>
+                      <span style={{ 
+                        fontSize: 'clamp(16px, 2.5vw, 18px)', 
+                        lineHeight: '1.5', 
+                        color: 'var(--theme-text)'
+                      }}>
+                        Dominar estrategias claras para monetizarlo desde el primer día.
+                      </span>
+                    </li>
+                    <li style={{ 
+                      display: 'flex', 
+                      alignItems: 'flex-start', 
+                      gap: '15px',
+                      padding: '12px 15px',
+                      borderRadius: '12px',
+                      background: 'rgba(74, 144, 226, 0.05)',
+                      transition: 'all 0.3s ease',
+                      border: '1px solid rgba(74, 144, 226, 0.1)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(74, 144, 226, 0.1)';
+                      e.currentTarget.style.transform = 'translateX(5px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(74, 144, 226, 0.05)';
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}>
+                      <span style={{ 
+                        color: 'var(--accent)', 
+                        fontWeight: '700', 
+                        fontSize: '22px',
+                        flexShrink: '0',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '30px',
+                        height: '30px',
+                        background: 'rgba(228, 105, 148, 0.1)',
+                        borderRadius: '50%'
+                      }}>✅</span>
+                      <span style={{ 
+                        fontSize: 'clamp(16px, 2.5vw, 18px)', 
+                        lineHeight: '1.5', 
+                        color: 'var(--theme-text)'
+                      }}>
+                        Posicionarte y destacar con una herramienta innovadora en el mercado digital.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style={{ 
+                fontSize: '18px', 
+                marginBottom: '30px', 
+                lineHeight: '1.6', 
+                color: 'var(--theme-text)',
+                background: 'linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(228, 105, 148, 0.05) 100%)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: '16px',
+                padding: 'clamp(20px, 4vw, 30px)',
+                border: '1px solid rgba(74, 144, 226, 0.1)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)',
+                position: 'relative',
+                overflow: 'hidden'
+              }} className="reveal reveal-up">
+                {/* Elemento decorativo */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-20px',
+                  right: '-20px',
+                  width: '120px',
+                  height: '120px',
+                  background: 'radial-gradient(circle, rgba(228, 105, 148, 0.1) 0%, transparent 70%)',
+                  borderRadius: '50%',
+                  zIndex: '0'
+                }}></div>
+                
+                <div style={{ position: 'relative', zIndex: '1' }}>
+                  <p style={{ 
+                    marginBottom: '16px',
+                    display: 'inline-block',
+                    padding: '8px 16px',
+                    background: 'linear-gradient(135deg, rgba(228, 105, 148, 0.2) 0%, rgba(74, 144, 226, 0.2) 100%)',
+                    borderRadius: '30px',
+                    fontWeight: '700',
+                    fontSize: 'clamp(16px, 2.5vw, 18px)',
+                    color: 'var(--accent)',
+                    boxShadow: '0 4px 12px rgba(228, 105, 148, 0.1)'
+                  }}>
+                    💸 Oferta Exclusiva por Tiempo Limitado
+                  </p>
+                  
+                  <div style={{ 
+                    marginBottom: '20px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center'
+                  }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '15px',
+                      marginBottom: '10px'
+                    }}>
+                      <span style={{ 
+                        textDecoration: 'line-through', 
+                        color: 'var(--theme-text-secondary)',
+                        fontSize: 'clamp(18px, 3vw, 22px)',
+                        fontWeight: '500',
+                        opacity: '0.7'
+                      }}>$100 USD</span>
+                      
+                      <div style={{
+                        width: '40px',
+                        height: '2px',
+                        background: 'linear-gradient(90deg, var(--primary), var(--secondary))',
+                        transform: 'rotate(-10deg)'
+                      }}></div>
+                      
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px'
+                      }}>
+                        <span style={{ 
+                          fontSize: 'clamp(28px, 5vw, 36px)', 
+                          fontWeight: '800', 
+                          color: 'var(--accent)',
+                          textShadow: '0 2px 10px rgba(228, 105, 148, 0.2)'
+                        }}>$30 USD</span>
+                      </div>
+                    </div>
+                    
+                    <div style={{
+                      display: 'inline-block',
+                      padding: '6px 14px',
+                      background: 'linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%)',
+                      color: 'white',
+                      borderRadius: '30px',
+                      fontWeight: '700',
+                      fontSize: 'clamp(14px, 2vw, 16px)',
+                      boxShadow: '0 4px 15px rgba(228, 105, 148, 0.2)',
+                      animation: 'pulse 2s infinite'
+                    }}>
+                      ¡Ahorra 70% Hoy!
+                    </div>
+                  </div>
+                  
+                  <p style={{ 
+                    marginBottom: '20px',
+                    padding: '12px 16px',
+                    borderLeft: '3px solid var(--primary)',
+                    background: 'rgba(74, 144, 226, 0.05)',
+                    borderRadius: '0 8px 8px 0',
+                    fontSize: 'clamp(16px, 2.5vw, 18px)'
+                  }}>
+                    🎁 Incluye <strong>3 Bonos de Acción Rápida</strong> (valorados en $50 USD) + Nuestra <span style={{ color: 'var(--primary)', fontWeight: '600' }}>Garantía Total de Satisfacción</span>.
+                  </p>
+                  
+                  <p style={{ 
+                    fontSize: 'clamp(18px, 3vw, 22px)', 
+                    fontWeight: '700', 
+                    color: 'var(--accent)',
+                    textAlign: 'center',
+                    padding: '10px',
+                    background: 'linear-gradient(135deg, rgba(228, 105, 148, 0.1) 0%, rgba(74, 144, 226, 0.1) 100%)',
+                    borderRadius: '12px',
+                    border: '1px dashed rgba(228, 105, 148, 0.3)'
+                  }}>
+                    👉 ¡Asegura Tu Cupo y Empieza a Generar Ingresos con IA!
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                marginBottom: '40px',
+                position: 'relative'
+              }} className="reveal reveal-up delay-300">
+                {/* Etiqueta de urgencia */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-15px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  background: 'linear-gradient(135deg, #FF3B30, #FF9500)',
+                  color: 'white',
+                  padding: '6px 16px',
+                  borderRadius: '30px',
+                  fontSize: '14px',
+                  fontWeight: '700',
+                  boxShadow: '0 4px 15px rgba(255, 59, 48, 0.3)',
+                  zIndex: '10',
+                  whiteSpace: 'nowrap'
+                }}>
+                  ¡OFERTA POR TIEMPO LIMITADO!
+                </div>
+                
+                <div className="countdown-grid" style={{
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  backdropFilter: 'blur(15px)',
+                  padding: 'clamp(20px, 4vw, 30px) clamp(15px, 3vw, 25px)',
+                  borderRadius: '20px',
+                  boxShadow: '0 15px 40px rgba(0, 0, 0, 0.2)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                }}>
+                  <div className="countdown-item animate-scaleIn delay-400">
+                    <div className="countdown-box animate-pulse-highlight" style={{ 
+                      backgroundColor: 'rgba(0, 0, 0, 0.4)', 
+                      border: '2px solid var(--primary)',
+                      boxShadow: '0 8px 25px rgba(74, 144, 226, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1)'
+                    }}>
+                      <span className="countdown-value" style={{ 
+                        color: 'white',
+                        textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)'
+                      }}>{timeLeft.days.toString().padStart(2, '0')}</span>
+                    </div>
+                    <span className="countdown-label" style={{ 
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: 'clamp(14px, 2vw, 16px)',
+                      textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)'
+                    }}>Días</span>
                   </div>
                   <div className="countdown-item animate-scaleIn delay-500">
-                    <div className="countdown-box animate-pulse-highlight" style={{ backgroundColor: 'var(--theme-card-bg)', border: '2px solid var(--primary)' }}>
-                      <span className="countdown-value" style={{ color: 'var(--theme-text)' }}>{timeLeft.hours.toString().padStart(2, '0')}</span>
+                    <div className="countdown-box animate-pulse-highlight" style={{ 
+                      backgroundColor: 'rgba(0, 0, 0, 0.4)', 
+                      border: '2px solid var(--secondary)',
+                      boxShadow: '0 8px 25px rgba(228, 105, 148, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1)'
+                    }}>
+                      <span className="countdown-value" style={{ 
+                        color: 'white',
+                        textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)'
+                      }}>{timeLeft.hours.toString().padStart(2, '0')}</span>
                     </div>
-                    <span className="countdown-label" style={{ color: 'var(--theme-text)' }}>Horas</span>
+                    <span className="countdown-label" style={{ 
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: 'clamp(14px, 2vw, 16px)',
+                      textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)'
+                    }}>Horas</span>
                   </div>
                   <div className="countdown-item animate-scaleIn delay-600">
-                    <div className="countdown-box animate-pulse-highlight" style={{ backgroundColor: 'var(--theme-card-bg)', border: '2px solid var(--primary)' }}>
-                      <span className="countdown-value" style={{ color: 'var(--theme-text)' }}>{timeLeft.minutes.toString().padStart(2, '0')}</span>
+                    <div className="countdown-box animate-pulse-highlight" style={{ 
+                      backgroundColor: 'rgba(0, 0, 0, 0.4)', 
+                      border: '2px solid var(--tertiary)',
+                      boxShadow: '0 8px 25px rgba(154, 218, 251, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1)'
+                    }}>
+                      <span className="countdown-value" style={{ 
+                        color: 'white',
+                        textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)'
+                      }}>{timeLeft.minutes.toString().padStart(2, '0')}</span>
                     </div>
-                    <span className="countdown-label" style={{ color: 'var(--theme-text)' }}>Minutos</span>
+                    <span className="countdown-label" style={{ 
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: 'clamp(14px, 2vw, 16px)',
+                      textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)'
+                    }}>Minutos</span>
                   </div>
                   <div className="countdown-item animate-scaleIn delay-700">
-                    <div className="countdown-box animate-pulse-highlight" style={{ backgroundColor: 'var(--theme-card-bg)', border: '2px solid var(--primary)' }}>
-                      <span className="countdown-value" style={{ color: 'var(--theme-text)' }}>{timeLeft.seconds.toString().padStart(2, '0')}</span>
+                    <div className="countdown-box animate-pulse-highlight" style={{ 
+                      backgroundColor: 'rgba(0, 0, 0, 0.4)', 
+                      border: '2px solid var(--accent)',
+                      boxShadow: '0 8px 25px rgba(200, 162, 200, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1)'
+                    }}>
+                      <span className="countdown-value" style={{ 
+                        color: 'white',
+                        textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)'
+                      }}>{timeLeft.seconds.toString().padStart(2, '0')}</span>
                     </div>
-                    <span className="countdown-label" style={{ color: 'var(--theme-text)' }}>Segundos</span>
+                    <span className="countdown-label" style={{ 
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: 'clamp(14px, 2vw, 16px)',
+                      textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)'
+                    }}>Segundos</span>
                   </div>
                 </div>
               </div>
@@ -4288,7 +4770,7 @@ function App() {
             borderRadius: '50%',
             filter: 'blur(60px)',
             zIndex: 0
-          }}></div>
+          }}> </div>
 
           {/* Floating geometric shapes */}
           <div style={{
@@ -4302,7 +4784,7 @@ function App() {
             transform: 'rotate(45deg)',
             zIndex: 0,
             opacity: '0.3'
-          }}></div>
+          }}></div>fsff
           <div style={{
             position: 'absolute',
             bottom: '30%',
@@ -4315,7 +4797,7 @@ function App() {
             opacity: '0.4'
           }}></div>
 
-          <div className="container" style={{
+          <div className="container" id ="dudas" style={{
             position: 'relative',
             zIndex: 1,
             padding: '0 clamp(16px, 4vw, 40px)'
@@ -4433,106 +4915,252 @@ function App() {
                   </div>
                 </div>
 
-                {/* Modern responsive grid */}
-                <div style={{
+                {/* Enhanced responsive grid with 2 rows design */}
+                <div id="iconos" style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
-                  gap: 'clamp(12px, 3vw, 20px)',
-                  maxWidth: '100%'
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                  gridTemplateRows: 'repeat(2, 1fr)',
+                  gap: 'clamp(20px, 4vw, 30px)',
+                  maxWidth: '100%',
+                  padding: 'clamp(20px, 4vw, 30px) 0'
                 }}>
                   {[
-                    { icon: '🔰', text: 'No sabes nada de tecnología', color: 'var(--primary)', gradient: 'linear-gradient(135deg, #4A90E2, #357ABD)' },
-                    { icon: '🎓', text: 'Nunca hiciste un taller online', color: 'var(--secondary)', gradient: 'linear-gradient(135deg, #E46994, #C8577A)' },
-                    { icon: '⚡', text: 'Quieres resultados rápidos', color: 'var(--accent)', gradient: 'linear-gradient(135deg, #9ADAFB, #7BC3E8)' },
-                    { icon: '💰', text: 'Buscas generar ingresos', color: '#10b981', gradient: 'linear-gradient(135deg, #10b981, #059669)' }
+                    {
+                      icon: '🔰',
+                      text: 'No sabes nada de tecnología',
+                      subtitle: 'Empezamos desde cero',
+                      color: 'var(--primary)',
+                      gradient: 'linear-gradient(135deg, #4A90E2, #357ABD)',
+                      bgGradient: 'linear-gradient(135deg, #4A90E210, #357ABD10)'
+                    },
+                    {
+                      icon: '🎓',
+                      text: 'Nunca hiciste un taller online',
+                      subtitle: 'Te guiamos paso a paso',
+                      color: 'var(--secondary)',
+                      gradient: 'linear-gradient(135deg, #E46994, #C8577A)',
+                      bgGradient: 'linear-gradient(135deg, #E4699410, #C8577A10)'
+                    },
+                    {
+                      icon: '⚡',
+                      text: 'Quieres resultados rápidos',
+                      subtitle: 'Resultados en 90 minutos',
+                      color: 'var(--tertiary)',
+                      gradient: 'linear-gradient(135deg, #9ADAFB, #7BC3E8)',
+                      bgGradient: 'linear-gradient(135deg, #9ADAFB10, #7BC3E810)'
+                    },
+                    {
+                      icon: '💰',
+                      text: 'Buscas generar ingresos',
+                      subtitle: 'Monetiza desde el día 1',
+                      color: '#10b981',
+                      gradient: 'linear-gradient(135deg, #10b981, #059669)',
+                      bgGradient: 'linear-gradient(135deg, #10b98110, #05966910)'
+                    }
                   ].map((item, index) => (
                     <div key={index} style={{
                       display: 'flex',
+                      flexDirection: 'column',
                       alignItems: 'center',
-                      gap: 'clamp(12px, 2.5vw, 16px)',
-                      padding: 'clamp(16px, 3vw, 24px) clamp(16px, 3vw, 20px)',
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      backdropFilter: 'blur(10px)',
-                      borderRadius: 'clamp(12px, 2.5vw, 20px)',
-                      border: '1px solid rgba(255, 255, 255, 0.1)',
-                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                      textAlign: 'center',
+                      gap: 'clamp(16px, 3vw, 20px)',
+                      padding: 'clamp(24px, 5vw, 32px)',
+                      background: 'var(--theme-card-bg)',
+                      backdropFilter: 'blur(20px)',
+                      borderRadius: 'clamp(16px, 3vw, 24px)',
+                      border: `2px solid ${item.color}20`,
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                       position: 'relative',
                       overflow: 'hidden',
-                      cursor: 'default'
+                      cursor: 'default',
+                      boxShadow: `0 8px 32px ${item.color}15`,
+                      minHeight: 'clamp(200px, 25vw, 250px)'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.15)';
-                      e.currentTarget.style.background = `${item.color}08`;
+                      e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                      e.currentTarget.style.boxShadow = `0 20px 60px ${item.color}25`;
+                      e.currentTarget.style.background = item.bgGradient;
+                      e.currentTarget.style.borderColor = `${item.color}40`;
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = 'none';
-                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                      e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                      e.currentTarget.style.boxShadow = `0 8px 32px ${item.color}15`;
+                      e.currentTarget.style.background = 'var(--theme-card-bg)';
+                      e.currentTarget.style.borderColor = `${item.color}20`;
                     }}
                     >
-                      {/* Hover gradient overlay */}
+                      {/* Decorative background elements */}
                       <div style={{
                         position: 'absolute',
-                        inset: '0',
+                        top: '-20%',
+                        right: '-20%',
+                        width: '60%',
+                        height: '60%',
                         background: item.gradient,
-                        opacity: '0',
-                        transition: 'opacity 0.3s ease',
-                        borderRadius: 'inherit',
-                        pointerEvents: 'none'
+                        borderRadius: '50%',
+                        opacity: '0.05',
+                        filter: 'blur(20px)',
+                        transition: 'all 0.4s ease'
                       }}></div>
 
+                      {/* Icon container with enhanced design */}
                       <div style={{
-                        fontSize: 'clamp(20px, 4vw, 28px)',
-                        width: 'clamp(36px, 7vw, 48px)',
-                        height: 'clamp(36px, 7vw, 48px)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: '50%',
-                        background: item.gradient,
-                        boxShadow: `0 4px 16px ${item.color}25`,
                         position: 'relative',
-                        zIndex: 1,
-                        flexShrink: 0
+                        marginBottom: 'clamp(12px, 2.5vw, 16px)'
                       }}>
-                        {item.icon}
+                        {/* Icon background ring */}
+                        <div style={{
+                          position: 'absolute',
+                          inset: '-8px',
+                          borderRadius: '50%',
+                          background: `conic-gradient(from 0deg, ${item.color}, ${item.color}80, ${item.color})`,
+                          opacity: '0.3',
+                          animation: 'spin 15s linear infinite'
+                        }}></div>
+
+                        {/* Main icon container */}
+                        <div style={{
+                          fontSize: 'clamp(32px, 6vw, 48px)',
+                          width: 'clamp(60px, 12vw, 80px)',
+                          height: 'clamp(60px, 12vw, 80px)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          borderRadius: '50%',
+                          background: item.gradient,
+                          boxShadow: `0 8px 32px ${item.color}30, 0 4px 16px ${item.color}20`,
+                          position: 'relative',
+                          zIndex: 1,
+                          border: '3px solid white',
+                          transition: 'all 0.4s ease'
+                        }}>
+                          {item.icon}
+                        </div>
                       </div>
-                      <span style={{
-                        fontSize: 'clamp(14px, 3vw, 18px)',
-                        color: 'var(--theme-text)',
-                        fontWeight: '600',
-                        lineHeight: '1.4',
+
+                      {/* Text content */}
+                      <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        gap: 'clamp(8px, 1.5vw, 12px)',
                         position: 'relative',
                         zIndex: 1
                       }}>
-                        {item.text}
-                      </span>
+                        <h4 style={{
+                          fontSize: 'clamp(16px, 3.5vw, 20px)',
+                          color: 'var(--theme-text)',
+                          fontWeight: '700',
+                          lineHeight: '1.3',
+                          margin: '0',
+                          textAlign: 'center'
+                        }}>
+                          {item.text}
+                        </h4>
+                        <p style={{
+                          fontSize: 'clamp(12px, 2.5vw, 14px)',
+                          color: 'var(--theme-text-secondary)',
+                          fontWeight: '500',
+                          lineHeight: '1.4',
+                          margin: '0',
+                          textAlign: 'center',
+                          opacity: '0.8'
+                        }}>
+                          {item.subtitle}
+                        </p>
+                      </div>
+
+                      {/* Bottom accent line */}
+                      <div style={{
+                        position: 'absolute',
+                        bottom: '0',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: '60%',
+                        height: '3px',
+                        background: item.gradient,
+                        borderRadius: '2px 2px 0 0',
+                        opacity: '0.6'
+                      }}></div>
                     </div>
                   ))}
                 </div>
 
-                {/* Bottom accent */}
+                {/* Enhanced bottom accent with multiple badges */}
                 <div style={{
-                  marginTop: 'clamp(20px, 4vw, 32px)',
-                  textAlign: 'center'
+                  marginTop: 'clamp(30px, 6vw, 40px)',
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: 'clamp(16px, 3vw, 20px)'
                 }}>
+                  {/* Main badge */}
                   <div style={{
-                    display: 'inline-block',
-                    padding: 'clamp(8px, 2vw, 12px) clamp(16px, 3vw, 24px)',
-                    background: 'linear-gradient(135deg, var(--primary)10, var(--secondary)10)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 'clamp(8px, 2vw, 12px)',
+                    padding: 'clamp(12px, 2.5vw, 16px) clamp(20px, 4vw, 28px)',
+                    background: 'linear-gradient(135deg, #10b981, #059669)',
                     borderRadius: '50px',
-                    border: '1px solid var(--primary)20',
-                    fontSize: 'clamp(12px, 2.5vw, 16px)',
-                    color: 'var(--theme-text)',
-                    fontWeight: '600'
+                    fontSize: 'clamp(14px, 3vw, 18px)',
+                    color: 'white',
+                    fontWeight: '700',
+                    boxShadow: '0 8px 25px rgba(16, 185, 129, 0.3)',
+                    position: 'relative',
+                    overflow: 'hidden'
                   }}>
-                    ✨ Sin experiencia previa necesaria
+                    {/* Shimmer effect */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '0',
+                      left: '-100%',
+                      width: '100%',
+                      height: '100%',
+                      background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
+                      animation: 'shimmer 3s infinite'
+                    }}></div>
+                    <span style={{ fontSize: 'clamp(16px, 3.5vw, 20px)', position: 'relative', zIndex: 1 }}>✨</span>
+                    <span style={{ position: 'relative', zIndex: 1 }}>Sin experiencia previa necesaria</span>
+                  </div>
+
+                  {/* Secondary badges */}
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: 'clamp(12px, 3vw, 20px)',
+                    flexWrap: 'wrap'
+                  }}>
+                    {[
+                      { icon: '🎯', text: '100% Práctico', color: 'var(--primary)' },
+                      { icon: '⚡', text: 'Resultados Inmediatos', color: 'var(--secondary)' },
+                      { icon: '🚀', text: 'Fácil de Seguir', color: 'var(--tertiary)' }
+                    ].map((badge, index) => (
+                      <div key={index} style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        padding: 'clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px)',
+                        background: `${badge.color}10`,
+                        border: `1px solid ${badge.color}20`,
+                        borderRadius: '20px',
+                        fontSize: 'clamp(11px, 2vw, 13px)',
+                        color: 'var(--theme-text)',
+                        fontWeight: '600'
+                      }}>
+                        <span style={{ fontSize: 'clamp(12px, 2.5vw, 14px)' }}>{badge.icon}</span>
+                        {badge.text}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
+   </div> 
 
+      <div class="container" id="preguntas-Freceuntes" >
+          <div >
             {/* Modern FAQ Container */}
             <div style={{
               maxWidth: '100%',
@@ -4583,6 +5211,8 @@ function App() {
                 zIndex: 0,
                 opacity: '0.5'
               }}></div>
+        <div></div> 
+
 
               {/* Modern FAQ Header */}
               <div style={{
@@ -4662,7 +5292,8 @@ function App() {
                   ]}
                 />
               </div>
-
+              </div>
+             <div id ="empezar-transformación ">
               {/* Modern Call to Action */}
               <div style={{
                 marginTop: 'clamp(30px, 6vw, 50px)',
@@ -4717,31 +5348,105 @@ function App() {
                   position: 'relative',
                   zIndex: 1
                 }}>
-                  {/* Rocket icon with pulse */}
+                  {/* Hero Image Section */}
                   <div style={{
-                    display: 'inline-flex',
+                    display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    width: 'clamp(50px, 10vw, 70px)',
-                    height: 'clamp(50px, 10vw, 70px)',
-                    borderRadius: '50%',
-                    background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
-                    marginBottom: 'clamp(16px, 3vw, 24px)',
-                    position: 'relative',
-                    boxShadow: '0 8px 32px rgba(74, 144, 226, 0.3)'
+                    marginBottom: 'clamp(24px, 5vw, 40px)',
+                    position: 'relative'
                   }}>
+                    {/* Main Hero Image Container */}
                     <div style={{
-                      position: 'absolute',
-                      inset: '-4px',
-                      borderRadius: '50%',
-                      border: '2px solid var(--primary)',
-                      opacity: '0.3',
-                      animation: 'pulse 2s infinite'
-                    }}></div>
-                    <span style={{
-                      fontSize: 'clamp(20px, 4vw, 32px)',
-                      filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
-                    }}>🚀</span>
+                      position: 'relative',
+                      width: 'clamp(200px, 40vw, 350px)',
+                      height: 'clamp(200px, 40vw, 350px)',
+                      marginBottom: 'clamp(20px, 4vw, 30px)'
+                    }}>
+                      {/* Background decorative rings */}
+                      <div style={{
+                        position: 'absolute',
+                        inset: '-20px',
+                        borderRadius: '50%',
+                        background: 'conic-gradient(from 0deg, var(--primary)20, var(--secondary)20, var(--tertiary)20, var(--primary)20)',
+                        animation: 'spin 20s linear infinite',
+                        opacity: '0.3'
+                      }}></div>
+                      <div style={{
+                        position: 'absolute',
+                        inset: '-10px',
+                        borderRadius: '50%',
+                        border: '2px solid var(--primary)',
+                        opacity: '0.2',
+                        animation: 'pulse 3s infinite'
+                      }}></div>
+
+                      {/* Main image placeholder */}
+                      <div style={{
+                        width: '100%',
+                        height: '100%',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, var(--primary)15, var(--secondary)15)',
+                        border: '4px solid var(--primary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        boxShadow: '0 20px 60px rgba(74, 144, 226, 0.3)'
+                      }}>
+                        {/* Placeholder for actual image */}
+                        <div style={{
+                          width: '100%',
+                          height: '100%',
+                          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                          borderRadius: '50%',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          flexDirection: 'column',
+                          gap: '10px'
+                        }}>
+                          <span style={{
+                            fontSize: 'clamp(40px, 8vw, 80px)',
+                            filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))'
+                          }}>🚀</span>
+
+                        </div>
+                      </div>
+
+                      {/* Floating achievement badges */}
+                      <div style={{
+                        position: 'absolute',
+                        top: '10%',
+                        right: '-10%',
+                        background: '#10b981',
+                        color: 'white',
+                        padding: '8px 12px',
+                        borderRadius: '20px',
+                        fontSize: 'clamp(10px, 2vw, 12px)',
+                        fontWeight: '700',
+                        boxShadow: '0 8px 20px rgba(16, 185, 129, 0.4)',
+                        animation: 'float 3s ease-in-out infinite'
+                      }}>
+                        ✨ Experto IA
+                      </div>
+                      <div style={{
+                        position: 'absolute',
+                        bottom: '15%',
+                        left: '-15%',
+                        background: 'var(--secondary)',
+                        color: 'white',
+                        padding: '8px 12px',
+                        borderRadius: '20px',
+                        fontSize: 'clamp(10px, 2vw, 12px)',
+                        fontWeight: '700',
+                        boxShadow: '0 8px 20px rgba(228, 105, 148, 0.4)',
+                        animation: 'float 3s ease-in-out infinite 1s'
+                      }}>
+                        🎯 Resultados
+                      </div>
+                    </div>
                   </div>
 
                   <h3 style={{
@@ -4857,7 +5562,8 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
+     </div>     
         </section>
       </main>
 
@@ -4902,6 +5608,16 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
 
 
 
