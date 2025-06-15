@@ -469,24 +469,23 @@ function App() {
                 👥 Nuestro Equipo
               </span>
               <h2 style={{
-                fontSize: '32px',
+                fontSize: 'clamp(28px, 5vw, 40px)',
                 fontWeight: '700',
                 color: 'var(--theme-text)',
                 marginBottom: '16px',
-                lineHeight: '1.2'
+                lineHeight: '1.2',
+                letterSpacing: '-0.02em'
               }}>
                 ¿Quién está detrás de todo esto? Personas como tú.
               </h2>
-              <p style={{
-                fontSize: '18px',
+              <p className="text-large" style={{
                 color: 'var(--theme-text-secondary)',
                 maxWidth: '700px',
                 margin: '0 auto 16px'
               }}>
                 Somos una empresa emergente. Un equipo de creativos, diseñadores, emprendedores y educadores que creemos que la inteligencia artificial no debería ser solo para expertos.
               </p>
-              <p style={{
-                fontSize: '16px',
+              <p className="text-normal" style={{
                 color: 'var(--theme-text-secondary)',
                 maxWidth: '600px',
                 margin: '0 auto'
@@ -667,10 +666,12 @@ function App() {
             {/* Enhanced Title */}
             <div style={{ textAlign: 'center', marginBottom: '60px' }} className="reveal reveal-up">
               <h2 style={{
-                fontSize: 'clamp(28px, 4vw, 36px)',
-                fontWeight: '800',
+                fontSize: 'clamp(28px, 5vw, 40px)',
+                fontWeight: '700',
                 color: 'var(--theme-text)',
                 marginBottom: '16px',
+                lineHeight: '1.2',
+                letterSpacing: '-0.02em',
                 background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -746,7 +747,7 @@ function App() {
                   {/* Negative indicator */}
                   <div style={{
                     position: 'absolute',
-                    top: '-12px',
+                    top: '3px',
                     right: '20px',
                     background: 'linear-gradient(135deg, #dc3545, #c82333)',
                     color: 'white',
@@ -810,10 +811,10 @@ function App() {
                           }}
                         />
                       </div>
-                      <h3 style={{ fontSize: '20px', fontWeight: '800', margin: '0', textTransform: 'uppercase' }}>
+                      <h3 style={{ fontSize: 'clamp(18px, 3vw, 24px)', fontWeight: '600', margin: '0', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                         ANTES DEL TALLER
                       </h3>
-                      <p style={{ margin: '8px 0 0 0', fontSize: '14px', opacity: '0.9', fontWeight: '600' }}>
+                      <p className="text-small" style={{ margin: '8px 0 0 0', opacity: '0.9', fontWeight: '600' }}>
                         Atascado y perdiendo oportunidades
                       </p>
                     </div>
@@ -822,15 +823,15 @@ function App() {
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginLeft: '0', paddingLeft: '0', listStyle: 'none', position: 'relative', zIndex: 1 }}>
                     <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545' }}>
                       <span style={{ color: '#dc3545', fontSize: '20px', marginTop: '2px' }}>❌</span>
-                      <span style={{ color: 'var(--theme-text)', fontSize: '16px', lineHeight: '1.5' }}>La IA te parece un laberinto: no sabes por dónde empezar ni cómo podría ayudarte a generar ingresos.</span>
+                      <span className="text-normal" style={{ color: 'var(--theme-text)' }}>La IA te parece un laberinto: no sabes por dónde empezar ni cómo podría ayudarte a generar ingresos.</span>
                     </li>
                     <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545' }}>
                       <span style={{ color: '#dc3545', fontSize: '20px', marginTop: '2px' }}>❌</span>
-                      <span style={{ color: 'var(--theme-text)', fontSize: '16px', lineHeight: '1.5' }}>Sientes que la tecnología es una barrera, y crear contenido profesional parece costoso, técnico y te consume demasiado tiempo.</span>
+                      <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Sientes que la tecnología es una barrera, y crear contenido profesional parece costoso, técnico y te consume demasiado tiempo.</span>
                     </li>
                     <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545' }}>
                       <span style={{ color: '#dc3545', fontSize: '20px', marginTop: '2px' }}>❌</span>
-                      <span style={{ color: 'var(--theme-text)', fontSize: '16px', lineHeight: '1.5' }}>Tienes ideas y proyectos valiosos, pero te cuesta destacar y monetizarlos efectivamente en el competitivo mundo digital.</span>
+                      <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Tienes ideas y proyectos valiosos, pero te cuesta destacar y monetizarlos efectivamente en el competitivo mundo digital.</span>
                     </li>
                   </ul>
                 </div>
@@ -866,7 +867,7 @@ function App() {
                   {/* Positive indicator */}
                   <div style={{
                     position: 'absolute',
-                    top: '-12px',
+                    top: '3px',
                     right: '20px',
                     background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
                     color: 'white',
@@ -930,10 +931,10 @@ function App() {
                           }}
                         />
                       </div>
-                      <h3 style={{ fontSize: '20px', fontWeight: '800', margin: '0', textTransform: 'uppercase' }}>
+                      <h3 style={{ fontSize: 'clamp(18px, 3vw, 24px)', fontWeight: '600', margin: '0', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                         DESPUÉS DEL TALLER
                       </h3>
-                      <p style={{ margin: '8px 0 0 0', fontSize: '14px', opacity: '0.9', fontWeight: '600' }}>
+                      <p className="text-small" style={{ margin: '8px 0 0 0', opacity: '0.9', fontWeight: '600' }}>
                         Equipado, rápido y monetizando
                       </p>
                     </div>
@@ -942,15 +943,15 @@ function App() {
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginLeft: '0', paddingLeft: '0', listStyle: 'none', position: 'relative', zIndex: 1 }}>
                     <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)' }}>
                       <span style={{ color: 'var(--primary)', fontSize: '20px', marginTop: '2px' }}>✅</span>
-                      <span style={{ color: 'var(--theme-text)', fontSize: '16px', lineHeight: '1.5' }}>Tendrás tu primer avatar profesional con IA, listo para usar y generar ingresos hoy mismo, en solo 90 minutos.</span>
+                      <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Tendrás tu primer avatar profesional con IA, listo para usar y generar ingresos hoy mismo, en solo 90 minutos.</span>
                     </li>
                     <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)' }}>
                       <span style={{ color: 'var(--primary)', fontSize: '20px', marginTop: '2px' }}>✅</span>
-                      <span style={{ color: 'var(--theme-text)', fontSize: '16px', lineHeight: '1.5' }}>Sabrás exactamente cómo crear contenido que te representa auténticamente, sin necesidad de cámaras, micrófonos o complejas habilidades de edición.</span>
+                      <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Sabrás exactamente cómo crear contenido que te representa auténticamente, sin necesidad de cámaras, micrófonos o complejas habilidades de edición.</span>
                     </li>
                     <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)' }}>
                       <span style={{ color: 'var(--primary)', fontSize: '20px', marginTop: '2px' }}>✅</span>
-                      <span style={{ color: 'var(--theme-text)', fontSize: '16px', lineHeight: '1.5' }}>Comenzarás a ahorrar cientos de dólares en producción y desbloquearás una nueva fuente de ingresos digitales, utilizando una habilidad práctica y demandada.</span>
+                      <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Comenzarás a ahorrar cientos de dólares en producción y desbloquearás una nueva fuente de ingresos digitales, utilizando una habilidad práctica y demandada.</span>
                     </li>
                   </ul>
                 </div>
@@ -989,10 +990,10 @@ function App() {
 
                 <div style={{ position: 'relative', zIndex: 1 }}>
                   <div style={{ fontSize: '48px', marginBottom: '20px' }}>⚡</div>
-                  <h3 style={{ fontSize: '24px', fontWeight: '800', marginBottom: '20px', textTransform: 'uppercase' }}>
+                  <h3 style={{ fontSize: 'clamp(22px, 4vw, 32px)', fontWeight: '600', marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                     Tu Transformación Garantizada en 90 Minutos
                   </h3>
-                  <p style={{ fontSize: '18px', fontWeight: '500', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto' }}>
+                  <p className="text-large" style={{ fontWeight: '500', maxWidth: '600px', margin: '0 auto' }}>
                     De sentirte abrumado por la IA y sin una ruta clara de monetización, a crear un avatar profesional que trabaja para ti y te abre puertas a nuevas oportunidades económicas, todo en una sola sesión práctica.
                   </p>
                 </div>
@@ -1212,10 +1213,12 @@ function App() {
               </div>
 
               <h2 style={{
-                fontSize: 'clamp(28px, 4vw, 40px)',
-                fontWeight: '800',
+                fontSize: 'clamp(28px, 5vw, 40px)',
+                fontWeight: '700',
                 color: 'var(--theme-text)',
                 marginBottom: '20px',
+                lineHeight: '1.2',
+                letterSpacing: '-0.02em',
                 background: 'linear-gradient(135deg, var(--accent), var(--primary))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -1224,14 +1227,12 @@ function App() {
                 Bonos Exclusivos si te Inscribes Hoy
               </h2>
 
-              <p style={{
+              <p className="text-large" style={{
                 textAlign: 'center',
                 maxWidth: '800px',
                 margin: '0 auto',
-                color: 'var(--gray)',
-                fontSize: 'clamp(18px, 2.5vw, 22px)',
-                fontWeight: '600',
-                lineHeight: '1.5'
+                color: 'var(--theme-text-secondary)',
+                fontWeight: '600'
               }}>
                 Accede a estos recursos exclusivos valorados en más de <span style={{ color: 'var(--accent)', fontWeight: '800' }}>$500</span>, totalmente <span style={{ color: 'var(--primary)', fontWeight: '800' }}>GRATIS</span> con tu acceso a la clase
               </p>
@@ -1261,7 +1262,7 @@ function App() {
                 boxShadow: '0 25px 60px rgba(200, 162, 200, 0.15)',
                 transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                 overflow: 'hidden'
-              }} className="reveal reveal-left card-hover animate-shimmer bonus-card">
+              }} className="reveal reveal-left card-hover bonus-card">
 
                 {/* Precio destacado en la esquina */}
                 <div style={{
@@ -1335,20 +1336,19 @@ function App() {
                 {/* Contenido */}
                 <div style={{ padding: '30px', textAlign: 'center' }}>
                   <h3 style={{
-                    fontSize: '24px',
-                    fontWeight: '900',
+                    fontSize: 'clamp(22px, 4vw, 32px)',
+                    fontWeight: '600',
                     marginBottom: '15px',
                     color: 'var(--theme-text)',
-                    lineHeight: '1.2'
+                    lineHeight: '1.2',
+                    letterSpacing: '-0.02em'
                   }}>
                     Guiones IA Listos para Usar
                   </h3>
 
-                  <p style={{
+                  <p className="text-normal" style={{
                     marginBottom: '25px',
-                    color: 'var(--theme-text-secondary)',
-                    fontSize: '16px',
-                    lineHeight: '1.6'
+                    color: 'var(--theme-text-secondary)'
                   }}>
                     Colección de guiones optimizados para avatares en diferentes nichos: marketing, educación, finanzas y más.
                   </p>
@@ -1417,7 +1417,7 @@ function App() {
                 boxShadow: '0 25px 60px rgba(74, 144, 226, 0.15)',
                 transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                 overflow: 'hidden'
-              }} className="reveal reveal-up card-hover animate-shimmer bonus-card">
+              }} className="reveal reveal-up card-hover bonus-card">
 
                 {/* Precio destacado en la esquina */}
                 <div style={{
@@ -1491,20 +1491,19 @@ function App() {
                 {/* Contenido */}
                 <div style={{ padding: '30px', textAlign: 'center' }}>
                   <h3 style={{
-                    fontSize: '24px',
-                    fontWeight: '900',
+                    fontSize: 'clamp(22px, 4vw, 32px)',
+                    fontWeight: '600',
                     marginBottom: '15px',
                     color: 'var(--theme-text)',
-                    lineHeight: '1.2'
+                    lineHeight: '1.2',
+                    letterSpacing: '-0.02em'
                   }}>
                     Settings Perfectos para Cada Plataforma
                   </h3>
 
-                  <p style={{
+                  <p className="text-normal" style={{
                     marginBottom: '25px',
-                    color: 'var(--theme-text-secondary)',
-                    fontSize: '16px',
-                    lineHeight: '1.6'
+                    color: 'var(--theme-text-secondary)'
                   }}>
                     Configuraciones exactas de calidad, iluminación y audio para YouTube, Instagram, LinkedIn, TikTok y presentaciones corporativas.
                   </p>
@@ -1573,7 +1572,7 @@ function App() {
                 boxShadow: '0 25px 60px rgba(228, 105, 148, 0.15)',
                 transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                 overflow: 'hidden'
-              }} className="reveal reveal-right card-hover animate-shimmer bonus-card">
+              }} className="reveal reveal-right card-hover bonus-card">
 
                 {/* Precio destacado en la esquina */}
                 <div style={{
@@ -1647,20 +1646,19 @@ function App() {
                 {/* Contenido */}
                 <div style={{ padding: '30px', textAlign: 'center' }}>
                   <h3 style={{
-                    fontSize: '24px',
-                    fontWeight: '900',
+                    fontSize: 'clamp(22px, 4vw, 32px)',
+                    fontWeight: '600',
                     marginBottom: '15px',
                     color: 'var(--theme-text)',
-                    lineHeight: '1.2'
+                    lineHeight: '1.2',
+                    letterSpacing: '-0.02em'
                   }}>
                     Sistema para Automatizar tu Producción
                   </h3>
 
-                  <p style={{
+                  <p className="text-normal" style={{
                     marginBottom: '25px',
-                    color: 'var(--theme-text-secondary)',
-                    fontSize: '16px',
-                    lineHeight: '1.6'
+                    color: 'var(--theme-text-secondary)'
                   }}>
                     Flujo de trabajo completo para crear y programar contenido con avatares en múltiples plataformas.
                   </p>
@@ -1730,39 +1728,39 @@ function App() {
               transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
             }} className="reveal reveal-up">
 
-              {/* Elementos decorativos animados */}
-              <div style={{
+              {/* Elementos decorativos animados - Responsivos */}
+              <div className="decorative-element-1" style={{
                 position: 'absolute',
-                top: '-20%',
-                left: '-10%',
-                width: '200px',
-                height: '200px',
+                top: '-10%',
+                left: '-5%',
+                width: 'clamp(100px, 20vw, 200px)',
+                height: 'clamp(100px, 20vw, 200px)',
                 background: 'linear-gradient(135deg, var(--primary)15, var(--secondary)15)',
                 borderRadius: '50%',
-                filter: 'blur(60px)',
+                filter: 'blur(clamp(30px, 6vw, 60px))',
                 animation: 'float 8s ease-in-out infinite',
                 zIndex: 0
               }}></div>
-              <div style={{
+              <div className="decorative-element-2" style={{
                 position: 'absolute',
-                bottom: '-20%',
-                right: '-10%',
-                width: '150px',
-                height: '150px',
+                bottom: '-10%',
+                right: '-5%',
+                width: 'clamp(80px, 15vw, 150px)',
+                height: 'clamp(80px, 15vw, 150px)',
                 background: 'linear-gradient(135deg, var(--accent)20, var(--tertiary)20)',
                 borderRadius: '50%',
-                filter: 'blur(40px)',
+                filter: 'blur(clamp(20px, 4vw, 40px))',
                 animation: 'float 6s ease-in-out infinite reverse',
                 zIndex: 0
               }}></div>
 
-              {/* Layout principal con imagen */}
-              <div style={{
+              {/* Layout principal con imagen - Responsive mejorado */}
+              <div className="total-value-layout" style={{
                 display: 'grid',
                 gridTemplateColumns: 'clamp(200px, 30%, 300px) 1fr',
                 gap: 'clamp(20px, 4vw, 40px)',
                 alignItems: 'center',
-                padding: 'clamp(30px, 6vw, 50px)',
+                padding: 'clamp(20px, 4vw, 50px)',
                 position: 'relative',
                 zIndex: 1
               }}>
@@ -1949,15 +1947,7 @@ function App() {
                 </div>
               </div>
 
-              {/* Responsive: Layout vertical en móviles */}
-              <style jsx>{`
-                @media (max-width: 768px) {
-                  div[style*="gridTemplateColumns"] {
-                    grid-template-columns: 1fr !important;
-                    text-align: center !important;
-                  }
-                }
-              `}</style>
+
             </div>
           </div>
         </section>
@@ -1986,20 +1976,19 @@ function App() {
                 🛡️ GARANTÍA TOTAL
               </div>
               <h2 style={{
-                fontSize: 'clamp(24px, 6vw, 42px)',
-                fontWeight: '800',
+                fontSize: 'clamp(28px, 5vw, 40px)',
+                fontWeight: '700',
                 color: 'var(--theme-text)',
                 marginBottom: '16px',
-                lineHeight: '1.2'
+                lineHeight: '1.2',
+                letterSpacing: '-0.02em'
               }}>
                 Si no aprendes, <span style={{ color: '#10b981' }}>te reembolsamos</span>
               </h2>
-              <p style={{
-                fontSize: 'clamp(14px, 3vw, 18px)',
+              <p className="text-normal" style={{
                 color: 'var(--theme-text-secondary)',
                 maxWidth: '600px',
-                margin: '0 auto',
-                lineHeight: '1.6'
+                margin: '0 auto'
               }}>
                 Estamos tan seguros de que transformarás tu negocio que te ofrecemos una garantía completa de 30 días.
               </p>
@@ -2088,18 +2077,17 @@ function App() {
                 }}>
                   <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>✅</div>
                   <h3 style={{
-                    fontSize: 'clamp(16px, 3vw, 20px)',
-                    fontWeight: '700',
+                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    fontWeight: '600',
                     marginBottom: '12px',
-                    color: '#10b981'
+                    color: '#10b981',
+                    letterSpacing: '-0.02em'
                   }}>
                     Sin Riesgo
                   </h3>
-                  <p style={{
-                    fontSize: 'clamp(14px, 2.5vw, 16px)',
+                  <p className="text-small" style={{
                     color: 'var(--theme-text-secondary)',
-                    margin: '0',
-                    lineHeight: '1.5'
+                    margin: '0'
                   }}>
                     Tu inversión está 100% protegida. Si no estás satisfecho, te devolvemos tu dinero.
                   </p>
@@ -2116,18 +2104,17 @@ function App() {
                 }}>
                   <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>⚡</div>
                   <h3 style={{
-                    fontSize: 'clamp(16px, 3vw, 20px)',
-                    fontWeight: '700',
+                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    fontWeight: '600',
                     marginBottom: '12px',
-                    color: 'var(--primary)'
+                    color: 'var(--primary)',
+                    letterSpacing: '-0.02em'
                   }}>
                     Proceso Rápido
                   </h3>
-                  <p style={{
-                    fontSize: 'clamp(14px, 2.5vw, 16px)',
+                  <p className="text-small" style={{
                     color: 'var(--theme-text-secondary)',
-                    margin: '0',
-                    lineHeight: '1.5'
+                    margin: '0'
                   }}>
                     Reembolso procesado en 24-48 horas. Sin complicaciones ni demoras.
                   </p>
@@ -2144,18 +2131,17 @@ function App() {
                 }}>
                   <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>🤝</div>
                   <h3 style={{
-                    fontSize: 'clamp(16px, 3vw, 20px)',
-                    fontWeight: '700',
+                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    fontWeight: '600',
                     marginBottom: '12px',
-                    color: 'var(--secondary)'
+                    color: 'var(--secondary)',
+                    letterSpacing: '-0.02em'
                   }}>
                     Sin Preguntas
                   </h3>
-                  <p style={{
-                    fontSize: 'clamp(14px, 2.5vw, 16px)',
+                  <p className="text-small" style={{
                     color: 'var(--theme-text-secondary)',
-                    margin: '0',
-                    lineHeight: '1.5'
+                    margin: '0'
                   }}>
                     Proceso simple y directo. Solo necesitas solicitar el reembolso.
                   </p>
@@ -2229,16 +2215,16 @@ function App() {
                   <span style={{ fontSize: '30px' }}>🔥</span>
                 </div>
                 
-                <h2 style={{ 
-                  fontSize: 'clamp(24px, 5vw, 38px)', 
-                  fontWeight: '900', 
+                <h2 style={{
+                  fontSize: 'clamp(28px, 5vw, 40px)',
+                  fontWeight: '700',
                   marginBottom: '15px',
                   background: 'linear-gradient(135deg, #FF3B30, #FF9500)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.5px',
+                  letterSpacing: '-0.02em',
                   lineHeight: '1.2',
                   textShadow: '0 2px 10px rgba(255, 59, 48, 0.1)',
                   position: 'relative',
@@ -2248,8 +2234,7 @@ function App() {
                   LANZA TU PRIMER AVATAR RENTABLE CON IA
                 </h2>
                 
-                <div style={{
-                  fontSize: 'clamp(18px, 3vw, 22px)',
+                <div className="text-large" style={{
                   fontWeight: '700',
                   color: 'var(--theme-text)',
                   marginBottom: '10px',
@@ -2338,27 +2323,25 @@ function App() {
                     }}>
                       <span style={{ fontSize: '28px', color: 'white' }}>⏱️</span>
                     </div>
-                    <p style={{ 
-                      textAlign: 'left', 
-                      fontSize: 'clamp(18px, 3vw, 22px)', 
-                      fontWeight: '800', 
+                    <p className="text-large" style={{
+                      textAlign: 'left',
+                      fontWeight: '800',
                       color: 'var(--theme-text)',
                       margin: '0',
                       background: 'linear-gradient(135deg, var(--primary), var(--accent))',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       textTransform: 'uppercase',
-                      letterSpacing: '0.5px'
+                      letterSpacing: '-0.02em'
                     }}>
                       EN SOLO 90 MINUTOS
                     </p>
                   </div>
                   
-                  <p style={{ 
-                    textAlign: 'center', 
-                    marginBottom: '25px', 
-                    fontSize: 'clamp(16px, 2.5vw, 20px)', 
-                    fontWeight: '700', 
+                  <p className="text-large" style={{
+                    textAlign: 'center',
+                    marginBottom: '25px',
+                    fontWeight: '700',
                     color: 'var(--theme-text)'
                   }}>
                     TENDRÁS TODO LO NECESARIO PARA:
@@ -2404,9 +2387,7 @@ function App() {
                         background: 'rgba(228, 105, 148, 0.1)',
                         borderRadius: '50%'
                       }}>✅</span>
-                      <span style={{ 
-                        fontSize: 'clamp(16px, 2.5vw, 18px)', 
-                        lineHeight: '1.5', 
+                      <span className="text-normal" style={{
                         color: 'var(--theme-text)'
                       }}>
                         Crear tu avatar profesional con IA, listo para captar la atención.
@@ -2443,9 +2424,7 @@ function App() {
                         background: 'rgba(228, 105, 148, 0.1)',
                         borderRadius: '50%'
                       }}>✅</span>
-                      <span style={{ 
-                        fontSize: 'clamp(16px, 2.5vw, 18px)', 
-                        lineHeight: '1.5', 
+                      <span className="text-normal" style={{
                         color: 'var(--theme-text)'
                       }}>
                         Dominar estrategias claras para monetizarlo desde el primer día.

@@ -38,15 +38,17 @@ Esta guía documenta el rediseño visual completo de la landing page, manteniend
 font-family: 'Poppins', sans-serif;
 ```
 
-### Jerarquía Tipográfica
+### Jerarquía Tipográfica Estandarizada
 
-| Elemento | Tamaño | Peso | Espaciado |
-|----------|--------|------|-----------|
-| **H1** | `2.5rem` (40px) | `700` (Bold) | `0.5px` |
-| **H2** | `2rem` (32px) | `600` (SemiBold) | `0.5px` |
-| **H3** | `1.75rem` (28px) | `600` (SemiBold) | `0.5px` |
-| **Párrafos** | `1rem` (16px) | `400` (Regular) | `0.01em` |
-| **Texto pequeño** | `0.875rem` (14px) | `400` (Regular) | `0.01em` |
+| Elemento | Tamaño Responsivo | Peso | Espaciado |
+|----------|-------------------|------|-----------|
+| **H1** | `clamp(32px, 6vw, 48px)` | `800` (ExtraBold) | `-0.02em` |
+| **H2** | `clamp(28px, 5vw, 40px)` | `700` (Bold) | `-0.02em` |
+| **H3** | `clamp(22px, 4vw, 32px)` | `600` (SemiBold) | `-0.02em` |
+| **H4** | `clamp(18px, 3vw, 24px)` | `600` (SemiBold) | `-0.02em` |
+| **Texto Grande** | `clamp(16px, 2.5vw, 20px)` | `400` (Regular) | `0.01em` |
+| **Texto Normal** | `clamp(14px, 2vw, 18px)` | `400` (Regular) | `0.01em` |
+| **Texto Pequeño** | `clamp(12px, 1.5vw, 16px)` | `400` (Regular) | `0.01em` |
 
 ### Altura de Línea
 - **Encabezados**: `1.2`

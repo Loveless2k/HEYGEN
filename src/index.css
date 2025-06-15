@@ -96,24 +96,49 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.02em;
+  margin: 0;
 }
 
+/* Sistema de tipografía estandarizado */
 h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 800;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: clamp(22px, 4vw, 32px);
   font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+}
+
+/* Clases de utilidad para texto */
+.text-large {
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-normal {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-small {
+  font-size: clamp(12px, 1.5vw, 16px);
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 a {
@@ -837,6 +862,17 @@ header {
   position: relative;
 }
 
+/* Enhanced Total Value Section - Responsive */
+.total-value-layout {
+  /* Estilos base ya definidos en línea */
+}
+
+/* Elementos decorativos responsivos */
+.decorative-element-1,
+.decorative-element-2 {
+  /* Estilos base ya definidos en línea */
+}
+
 /* Floating Button */
 .floating-btn {
   position: fixed;
@@ -1173,6 +1209,70 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     display: none; /* Ocultar efectos holográficos en móvil */
   }
 
+  /* Enhanced Total Value Section - Móviles */
+  .total-value-layout {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: clamp(15px, 4vw, 25px) !important;
+    padding: clamp(15px, 4vw, 25px) !important;
+  }
+
+  /* Ocultar elementos decorativos en móviles pequeños */
+  .decorative-element-1,
+  .decorative-element-2 {
+    display: none;
+  }
+
+  /* PricingOfferSection - Móviles */
+  .pricing-offer-container {
+    margin: 0 5px !important;
+    padding: clamp(16px, 4vw, 20px) !important;
+    border-radius: clamp(16px, 4vw, 20px) !important;
+    max-width: calc(100vw - 10px) !important;
+  }
+
+  .offer-badge-modern {
+    flex-direction: column !important;
+    gap: clamp(4px, 1vw, 6px) !important;
+    padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px) !important;
+    font-size: clamp(10px, 2.5vw, 14px) !important;
+    border-radius: 40px !important;
+  }
+
+  .offer-text {
+    font-size: clamp(9px, 2vw, 12px) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  /* Ocultar elementos decorativos de la sección de precios en móviles */
+  .decorative-element-top,
+  .decorative-element-bottom {
+    display: none !important;
+  }
+
+  /* Ocultar partículas flotantes en móviles */
+  .floating-particles {
+    display: none !important;
+  }
+
+  /* Ajustar espaciado de la sección de precios */
+  .pricing-section-modern {
+    padding: clamp(20px, 5vw, 24px) !important;
+    margin-bottom: clamp(24px, 5vw, 32px) !important;
+  }
+
+  /* Ajustar sección de beneficios */
+  .benefits-section-modern {
+    padding: clamp(20px, 5vw, 24px) !important;
+    margin-bottom: clamp(20px, 5vw, 28px) !important;
+  }
+
+  /* Ajustar CTA */
+  .cta-section-modern {
+    padding: clamp(16px, 4vw, 20px) !important;
+  }
+
   .countdown-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -1314,6 +1414,51 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     height: 3px;
   }
 
+  /* Enhanced Total Value Section - Tablets pequeñas */
+  .total-value-layout {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: clamp(20px, 4vw, 30px) !important;
+  }
+
+  /* Mostrar elementos decorativos pero más pequeños */
+  .decorative-element-1,
+  .decorative-element-2 {
+    display: block;
+    opacity: 0.5;
+  }
+
+  /* PricingOfferSection - Tablets pequeñas */
+  .pricing-offer-container {
+    margin: 0 10px !important;
+    padding: clamp(20px, 4vw, 28px) !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+
+  .offer-badge-modern {
+    flex-direction: row !important;
+    gap: clamp(6px, 1.5vw, 10px) !important;
+    padding: clamp(10px, 2.5vw, 14px) clamp(16px, 3.5vw, 20px) !important;
+    font-size: clamp(12px, 2.8vw, 16px) !important;
+  }
+
+  .offer-text {
+    font-size: clamp(11px, 2.5vw, 14px) !important;
+  }
+
+  /* Mostrar elementos decorativos de precios con opacidad reducida */
+  .decorative-element-top,
+  .decorative-element-bottom {
+    display: block !important;
+    opacity: 0.4 !important;
+  }
+
+  /* Mostrar partículas flotantes con opacidad reducida */
+  .floating-particles {
+    display: block !important;
+    opacity: 0.6 !important;
+  }
+
   .team-carousel .slick-prev {
     left: -10px;
   }
@@ -1414,6 +1559,49 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     max-width: none !important;
     margin: 0 !important;
   }
+
+  /* Enhanced Total Value Section - Tablets horizontales */
+  .total-value-layout {
+    grid-template-columns: clamp(180px, 25%, 250px) 1fr !important;
+    gap: clamp(25px, 4vw, 35px) !important;
+  }
+
+  /* Elementos decorativos visibles pero reducidos */
+  .decorative-element-1,
+  .decorative-element-2 {
+    display: block;
+    opacity: 0.7;
+  }
+
+  /* PricingOfferSection - Tablets horizontales */
+  .pricing-offer-container {
+    margin: 0 15px !important;
+    padding: clamp(24px, 4vw, 32px) !important;
+    max-width: calc(100vw - 30px) !important;
+  }
+
+  .offer-badge-modern {
+    gap: clamp(8px, 2vw, 12px) !important;
+    padding: clamp(12px, 3vw, 16px) clamp(20px, 4vw, 24px) !important;
+    font-size: clamp(14px, 3vw, 18px) !important;
+  }
+
+  .offer-text {
+    font-size: clamp(13px, 2.8vw, 16px) !important;
+  }
+
+  /* Elementos decorativos de precios visibles */
+  .decorative-element-top,
+  .decorative-element-bottom {
+    display: block !important;
+    opacity: 0.7 !important;
+  }
+
+  /* Partículas flotantes visibles */
+  .floating-particles {
+    display: block !important;
+    opacity: 0.8 !important;
+  }
 }
 
 /* Media query adicional para rangos intermedios donde la tercera tarjeta de bonos queda sola */
@@ -1509,6 +1697,49 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
     grid-row: 2;
     grid-column: 4 / 7; /* Ocupa columnas 4-6 (mitad derecha) */
   }
+
+  /* Enhanced Total Value Section - Desktop */
+  .total-value-layout {
+    grid-template-columns: clamp(200px, 30%, 300px) 1fr !important;
+    gap: clamp(30px, 4vw, 40px) !important;
+  }
+
+  /* Elementos decorativos completamente visibles */
+  .decorative-element-1,
+  .decorative-element-2 {
+    display: block;
+    opacity: 1;
+  }
+
+  /* PricingOfferSection - Desktop */
+  .pricing-offer-container {
+    margin: 0 auto !important;
+    padding: clamp(32px, 5vw, 56px) !important;
+    max-width: 900px !important;
+  }
+
+  .offer-badge-modern {
+    gap: clamp(12px, 2vw, 16px) !important;
+    padding: clamp(16px, 3vw, 18px) clamp(28px, 4vw, 32px) !important;
+    font-size: clamp(18px, 3vw, 22px) !important;
+  }
+
+  .offer-text {
+    font-size: clamp(16px, 3vw, 20px) !important;
+  }
+
+  /* Elementos decorativos de precios completamente visibles */
+  .decorative-element-top,
+  .decorative-element-bottom {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  /* Partículas flotantes completamente visibles */
+  .floating-particles {
+    display: block !important;
+    opacity: 1 !important;
+  }
 }
 
 /* Estilos para la sección de beneficios */
@@ -1522,5 +1753,55 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
   .news-style-benefits {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* PricingOfferSection - Estilos modernos y responsivos */
+.pricing-offer-section {
+  /* Estilos base ya definidos en línea */
+}
+
+.pricing-offer-container {
+  /* Estilos base ya definidos en línea */
+}
+
+.offer-badge-modern {
+  /* Estilos base ya definidos en línea */
+}
+
+.pricing-section-modern {
+  /* Estilos base ya definidos en línea */
+}
+
+.benefits-section-modern {
+  /* Estilos base ya definidos en línea */
+}
+
+.cta-section-modern {
+  /* Estilos base ya definidos en línea */
+}
+
+/* Partículas flotantes de la sección de precios */
+.floating-particles {
+  pointer-events: none;
+}
+
+.floating-particles .particle {
+  pointer-events: none;
+}
+
+/* Animaciones mejoradas para shimmer */
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* Animación de spin para elementos decorativos */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 

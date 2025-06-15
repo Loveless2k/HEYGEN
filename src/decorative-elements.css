@@ -1,3 +1,4 @@
+
 /* Elementos decorativos y formas geométricas suaves */
 
 /* Formas decorativas de fondo */
@@ -619,6 +620,7 @@
   .team-avatar-container {
     width: 100px;
     height: 100px;
+    margin-bottom: 30px; /* Aumentar margen inferior para dar espacio al badge */
   }
 
   .team-avatar-fallback {
@@ -627,6 +629,22 @@
 
   .team-member-name {
     font-size: 20px;
+  }
+
+  /* Reposicionar el badge en móviles para que no tape la foto */
+  .team-specialty-badge {
+    position: absolute;
+    top: auto;
+    bottom: -15px; /* Posicionar debajo del avatar */
+    right: 50%;
+    transform: translateX(50%); /* Centrar horizontalmente */
+    font-size: 10px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    max-width: 120px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .news-style-benefits {
@@ -666,3 +684,37 @@
     height: 100px;
   }
 }
+
+/* Ajustes adicionales para dispositivos extra pequeños */
+@media (max-width: 480px) {
+  .team-avatar-container {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 35px; /* Más espacio en móviles pequeños */
+  }
+
+  .team-specialty-badge {
+    bottom: -18px; /* Más separación en móviles pequeños */
+    font-size: 9px;
+    padding: 3px 6px;
+    max-width: 100px;
+    border-radius: 15px;
+  }
+
+  .team-social-card {
+    padding: 20px 16px;
+  }
+
+  .team-member-name {
+    font-size: 18px;
+  }
+
+  .team-member-role {
+    font-size: 13px;
+  }
+
+  .team-member-description {
+    font-size: 14px;
+  }
+}
+
