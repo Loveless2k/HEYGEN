@@ -101,42 +101,42 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* Sistema de tipografía estandarizado */
+/* Sistema de tipografía estandarizado - Optimizado para máxima legibilidad */
 h1 {
-  font-size: clamp(32px, 6vw, 48px);
+  font-size: clamp(42px, 8vw, 64px);
   font-weight: 800;
 }
 
 h2 {
-  font-size: clamp(28px, 5vw, 40px);
+  font-size: clamp(36px, 7vw, 52px);
   font-weight: 700;
 }
 
 h3 {
-  font-size: clamp(22px, 4vw, 32px);
+  font-size: clamp(30px, 6vw, 42px);
   font-weight: 600;
 }
 
 h4 {
-  font-size: clamp(18px, 3vw, 24px);
+  font-size: clamp(26px, 5vw, 32px);
   font-weight: 600;
 }
 
-/* Clases de utilidad para texto */
+/* Clases de utilidad para texto - Tamaños significativamente aumentados */
 .text-large {
-  font-size: clamp(16px, 2.5vw, 20px);
+  font-size: clamp(22px, 4vw, 28px);
   font-weight: 400;
   line-height: 1.6;
 }
 
 .text-normal {
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: clamp(20px, 3vw, 26px);
   font-weight: 400;
   line-height: 1.5;
 }
 
 .text-small {
-  font-size: clamp(12px, 1.5vw, 16px);
+  font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 400;
   line-height: 1.4;
 }
@@ -256,12 +256,12 @@ header {
   box-shadow: 0 6px 20px rgba(214, 95, 171, 0.25);
 }
 
-/* Hero Section con imagen de fondo y degradado tecnológico */
+/* Hero Section con imagen de fondo fija y degradado tecnológico */
 .hero {
   padding-top: 120px;
   padding-bottom: 80px;
   background:
-    linear-gradient(135deg, rgba(74, 144, 226, 0.9) 0%, rgba(154, 218, 251, 0.8) 25%, rgba(228, 105, 148, 0.8) 75%, rgba(200, 162, 200, 0.9) 100%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.4) 100%),
     url('/fondos/fondo.png');
   background-size: cover;
   background-position: center;
@@ -272,7 +272,7 @@ header {
   overflow: hidden;
 }
 
-/* Overlay adicional para mejorar legibilidad */
+/* Overlay adicional para mejorar legibilidad y contraste */
 .hero::before {
   content: '';
   position: absolute;
@@ -280,7 +280,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -460,7 +460,7 @@ header {
   border-radius: 9999px;
   font-weight: 700;
   margin-bottom: 24px;
-  font-size: 14px;
+  font-size: clamp(18px, 2.5vw, 24px);
   text-align: center;
   box-shadow:
     0 4px 15px rgba(74, 144, 226, 0.4),
@@ -490,14 +490,16 @@ header {
   transform: rotate(45deg);
 }
 
-/* Título tecnológico con gradientes */
+/* Título tecnológico con gradientes - Mejorado para legibilidad */
 .hero-title-tech {
-  font-size: 36px;
+  font-size: clamp(42px, 8vw, 64px);
+  font-weight: 800;
   margin-bottom: 24px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   position: relative;
   z-index: 10;
   line-height: 1.2;
+  color: white;
 }
 
 .text-gradient {
@@ -521,12 +523,13 @@ header {
   50% { background-position: 100% 50%; }
 }
 
-/* Descripción tecnológica */
+/* Descripción tecnológica - Mejorada para legibilidad */
 .hero-description-tech {
-  font-size: 18px;
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 400;
   margin-bottom: 32px;
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   position: relative;
   z-index: 10;
   line-height: 1.6;
@@ -1187,12 +1190,12 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
   }
 
   .hero-title-tech {
-    font-size: 28px;
+    font-size: clamp(36px, 8vw, 48px);
     margin-bottom: 15px;
   }
 
   .hero-description-tech {
-    font-size: 16px;
+    font-size: clamp(20px, 4vw, 24px);
     margin-bottom: 20px;
   }
 
@@ -1372,7 +1375,7 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
 /* Dispositivos pequeños (tablets verticales, 576px y más) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .hero-title-tech {
-    font-size: 32px;
+    font-size: clamp(38px, 7vw, 52px);
   }
 
   .video-container-tech {
@@ -1508,7 +1511,7 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
   }
 
   .hero-title-tech {
-    font-size: 36px;
+    font-size: clamp(40px, 6vw, 56px);
   }
 
   .video-container-tech {
@@ -1629,7 +1632,7 @@ select:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="ema
   }
 
   .hero-title-tech {
-    font-size: 48px;
+    font-size: clamp(42px, 8vw, 64px);
   }
 
   /* Restaurar la posición original de los badges estadísticos tecnológicos en PC */

@@ -30,22 +30,41 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-grid">
           <div>
-            <span className="hero-badge-tech animate-fadeIn">
+            <span className="hero-badge-tech animate-fadeIn" style={{
+              fontSize: 'clamp(18px, 2.5vw, 24px)',
+              fontWeight: '700',
+              color: 'white',
+              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+            }}>
               <span className="badge-icon">🚀</span>
               ACCESO LIMITADO ¡SOLO POR POCOS DÍAS!
               <span className="badge-glow"></span>
             </span>
 
-            <h1 className="hero-title-tech animate-fadeInUp">
-              Convierte <span className="text-gradient">minutos</span> de tu tiempo en una nueva
-              <span className="text-highlight"> habilidad digital</span> que puedes
-              <span className="text-gradient">monetizar</span>
+            <h1 className="hero-title-tech animate-fadeInUp" style={{
+              fontSize: 'clamp(42px, 8vw, 64px)',
+              fontWeight: '800',
+              lineHeight: '1.2',
+              letterSpacing: '-0.02em',
+              color: 'white',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+            }}>
+              Convierte <span style={{ color: '#1a1a1a', fontWeight: '900' }}>minutos</span> de tu tiempo en una nueva
+              <span style={{ color: '#1a1a1a', fontWeight: '900' }}> habilidad digital</span> que puedes
+              <span style={{ color: '#1a1a1a', fontWeight: '900' }}>monetizar</span>
             </h1>
 
-            <p className="hero-description-tech animate-fadeInUp delay-200">
-              Aprende a crear tu propio <span className="tech-highlight">avatar con inteligencia artificial</span>,
-              <strong>sin ser técnico ni experto</strong>. Usa esta herramienta para vender más, ahorrar en producción y destacar en el mundo digital.
-              <strong>Cientos de personas como tú</strong> ya están generando contenido y creando nuevas fuentes de ingreso.
+            <p className="hero-description-tech animate-fadeInUp delay-200" style={{
+              fontSize: 'clamp(22px, 4vw, 28px)',
+              fontWeight: '400',
+              lineHeight: '1.6',
+              color: 'white',
+              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+              marginBottom: '30px'
+            }}>
+              Aprende a crear tu propio <span style={{ color: '#1a1a1a', fontWeight: '700' }}>avatar con inteligencia artificial</span>,
+              <strong style={{ color: 'white' }}>sin ser técnico ni experto</strong>. Usa esta herramienta para vender más, ahorrar en producción y destacar en el mundo digital.
+              <strong style={{ color: 'white' }}>Cientos de personas como tú</strong> ya están generando contenido y creando nuevas fuentes de ingreso.
             </p>
 
             <CountdownTimer targetDate={targetDate} />

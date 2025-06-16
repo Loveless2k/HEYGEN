@@ -1,8 +1,10 @@
+import { useMemo } from 'react';
 import { useCountdown } from '../../hooks/useCountdown';
 
 const PricingCountdown = () => {
   // Fecha límite: 10 de junio de 2025 a las 11:59 (horario Chile)
-  const targetDate = new Date('2025-06-20T23:59:00-04:00'); // UTC-4 para Chile
+  // Usamos useMemo para evitar crear un nuevo Date en cada render
+  const targetDate = useMemo(() => new Date('2025-06-20T23:59:00-04:00'), []); // UTC-4 para Chile
   const timeLeft = useCountdown(targetDate);
 
   return (

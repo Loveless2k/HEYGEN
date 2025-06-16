@@ -119,7 +119,7 @@ const PricingOfferSection = () => {
               borderRadius: '60px',
               color: 'white',
               fontWeight: '900',
-              fontSize: 'clamp(14px, 3.5vw, 22px)',
+              fontSize: 'clamp(20px, 4vw, 28px)',
               boxShadow: `
                 0 12px 30px rgba(228, 105, 148, 0.4),
                 0 4px 15px rgba(74, 144, 226, 0.3),
@@ -145,18 +145,17 @@ const PricingOfferSection = () => {
               }}></div>
 
               <span style={{
-                fontSize: 'clamp(18px, 4vw, 26px)',
+                fontSize: 'clamp(24px, 5vw, 32px)',
                 position: 'relative',
                 zIndex: '2'
               }}>⚡</span>
               <span className="offer-text" style={{
                 position: 'relative',
                 zIndex: '2',
-                textShadow: '0 10px 10px rgba(0, 0, 0, 0.3)',
-                fontSize: 'clamp(35px, 3.5vw, 22px)'
+                textShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'
               }}>Oferta Exclusiva por Tiempo Limitado</span>
               <span style={{
-                fontSize: 'clamp(18px, 4vw, 26px)',
+                fontSize: 'clamp(24px, 5vw, 32px)',
                 position: 'relative',
                 zIndex: '2'
               }}>🔥</span>
@@ -202,7 +201,7 @@ const PricingOfferSection = () => {
                 marginBottom: '20px'
               }}>
                 <span style={{
-                  fontSize: 'clamp(22px, 5vw, 32px)',
+                  fontSize: 'clamp(28px, 6vw, 38px)',
                   color: 'var(--theme-text-secondary)',
                   textDecoration: 'line-through',
                   fontWeight: '700',
@@ -218,7 +217,7 @@ const PricingOfferSection = () => {
                     color: 'white',
                     padding: '4px 10px',
                     borderRadius: '15px',
-                    fontSize: 'clamp(10px, 2vw, 14px)',
+                    fontSize: 'clamp(14px, 2.5vw, 18px)',
                     fontWeight: '800',
                     boxShadow: '0 4px 12px rgba(239, 68, 68, 0.4)'
                   }}>
@@ -241,7 +240,7 @@ const PricingOfferSection = () => {
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
-                  fontSize: 'clamp(56px, 12vw, 88px)',
+                  fontSize: 'clamp(64px, 14vw, 96px)',
                   fontWeight: '900',
                   lineHeight: '0.9',
                   textShadow: '0 6px 25px rgba(74, 144, 226, 0.4)',
@@ -250,7 +249,7 @@ const PricingOfferSection = () => {
                 }}>
                   $30
                   <span style={{
-                    fontSize: 'clamp(28px, 6vw, 40px)',
+                    fontSize: 'clamp(32px, 7vw, 44px)',
                     color: 'var(--theme-text)',
                     fontWeight: '700',
                     marginLeft: '8px'
@@ -267,7 +266,7 @@ const PricingOfferSection = () => {
                     color: 'white',
                     padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px)',
                     borderRadius: '25px',
-                    fontSize: 'clamp(14px, 3vw, 20px)',
+                    fontSize: 'clamp(18px, 4vw, 24px)',
                     fontWeight: '900',
                     boxShadow: `
                       0 6px 20px rgba(16, 185, 129, 0.5),
@@ -296,7 +295,7 @@ const PricingOfferSection = () => {
                 border: '3px solid var(--tertiary)',
                 color: 'var(--theme-text)',
                 fontWeight: '800',
-                fontSize: 'clamp(16px, 4vw, 24px)',
+                fontSize: 'clamp(20px, 5vw, 28px)',
                 boxShadow: `
                   0 8px 20px rgba(200, 162, 200, 0.3),
                   inset 0 1px 0 rgba(255, 255, 255, 0.2)

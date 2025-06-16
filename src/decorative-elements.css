@@ -519,8 +519,8 @@
 
 .team-specialty-badge {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -12px;
+  right: -20px;
   background: linear-gradient(135deg, var(--accent-alt), var(--secondary));
   color: white;
   padding: 6px 12px;
@@ -531,6 +531,7 @@
   letter-spacing: 0.5px;
   box-shadow: 0 4px 15px rgba(214, 95, 171, 0.3);
   animation: pulse 2s infinite;
+  z-index: 10;
 }
 
 .team-member-name {
@@ -603,6 +604,19 @@
   font-weight: 600;
   margin-top: 12px;
   border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+/* Desktop adjustments - Mejor posicionamiento del badge */
+@media (min-width: 992px) {
+  .team-specialty-badge {
+    top: -15px;
+    right: -25px;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 25px;
+    white-space: nowrap;
+    transform: rotate(12deg); /* Ligera rotación para mejor estética */
+  }
 }
 
 /* Responsive adjustments */

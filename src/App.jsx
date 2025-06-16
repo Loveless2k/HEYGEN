@@ -66,7 +66,6 @@ function App() {
   });
 
 
-
   // Referencias y estados para medidas de seguridad
   const recaptchaRef = useRef(null);
   const [recaptchaToken, setRecaptchaToken] = useState('');
@@ -469,7 +468,7 @@ function App() {
                 👥 Nuestro Equipo
               </span>
               <h2 style={{
-                fontSize: 'clamp(28px, 5vw, 40px)',
+                fontSize: 'clamp(36px, 7vw, 52px)',
                 fontWeight: '700',
                 color: 'var(--theme-text)',
                 marginBottom: '16px',
@@ -666,7 +665,7 @@ function App() {
             {/* Enhanced Title */}
             <div style={{ textAlign: 'center', marginBottom: '60px' }} className="reveal reveal-up">
               <h2 style={{
-                fontSize: 'clamp(28px, 5vw, 40px)',
+                fontSize: 'clamp(36px, 7vw, 52px)',
                 fontWeight: '700',
                 color: 'var(--theme-text)',
                 marginBottom: '16px',
@@ -811,7 +810,7 @@ function App() {
                           }}
                         />
                       </div>
-                      <h3 style={{ fontSize: 'clamp(18px, 3vw, 24px)', fontWeight: '600', margin: '0', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+                      <h3 style={{ fontSize: 'clamp(26px, 5vw, 32px)', fontWeight: '600', margin: '0', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                         ANTES DEL TALLER
                       </h3>
                       <p className="text-small" style={{ margin: '8px 0 0 0', opacity: '0.9', fontWeight: '600' }}>
@@ -820,16 +819,27 @@ function App() {
                     </div>
                   </div>
 
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginLeft: '0', paddingLeft: '0', listStyle: 'none', position: 'relative', zIndex: 1 }}>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545' }}>
+                  <ul style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '20px',
+                    marginLeft: '0',
+                    paddingLeft: '0',
+                    listStyle: 'none',
+                    position: 'relative',
+                    zIndex: 1,
+                    minHeight: '280px',
+                    justifyContent: 'space-between'
+                  }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545', flex: '1' }}>
                       <span style={{ color: '#dc3545', fontSize: '20px', marginTop: '2px' }}>❌</span>
                       <span className="text-normal" style={{ color: 'var(--theme-text)' }}>La IA te parece un laberinto: no sabes por dónde empezar ni cómo podría ayudarte a generar ingresos.</span>
                     </li>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545' }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545', flex: '1' }}>
                       <span style={{ color: '#dc3545', fontSize: '20px', marginTop: '2px' }}>❌</span>
                       <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Sientes que la tecnología es una barrera, y crear contenido profesional parece costoso, técnico y te consume demasiado tiempo.</span>
                     </li>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545' }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(220, 53, 69, 0.1)', borderRadius: '12px', borderLeft: '4px solid #dc3545', flex: '1' }}>
                       <span style={{ color: '#dc3545', fontSize: '20px', marginTop: '2px' }}>❌</span>
                       <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Tienes ideas y proyectos valiosos, pero te cuesta destacar y monetizarlos efectivamente en el competitivo mundo digital.</span>
                     </li>
@@ -931,7 +941,7 @@ function App() {
                           }}
                         />
                       </div>
-                      <h3 style={{ fontSize: 'clamp(18px, 3vw, 24px)', fontWeight: '600', margin: '0', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+                      <h3 style={{ fontSize: 'clamp(26px, 5vw, 32px)', fontWeight: '600', margin: '0', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                         DESPUÉS DEL TALLER
                       </h3>
                       <p className="text-small" style={{ margin: '8px 0 0 0', opacity: '0.9', fontWeight: '600' }}>
@@ -940,16 +950,27 @@ function App() {
                     </div>
                   </div>
 
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginLeft: '0', paddingLeft: '0', listStyle: 'none', position: 'relative', zIndex: 1 }}>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)' }}>
+                  <ul style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '20px',
+                    marginLeft: '0',
+                    paddingLeft: '0',
+                    listStyle: 'none',
+                    position: 'relative',
+                    zIndex: 1,
+                    minHeight: '280px',
+                    justifyContent: 'space-between'
+                  }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)', flex: '1' }}>
                       <span style={{ color: 'var(--primary)', fontSize: '20px', marginTop: '2px' }}>✅</span>
                       <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Tendrás tu primer avatar profesional con IA, listo para usar y generar ingresos hoy mismo, en solo 90 minutos.</span>
                     </li>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)' }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)', flex: '1' }}>
                       <span style={{ color: 'var(--primary)', fontSize: '20px', marginTop: '2px' }}>✅</span>
                       <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Sabrás exactamente cómo crear contenido que te representa auténticamente, sin necesidad de cámaras, micrófonos o complejas habilidades de edición.</span>
                     </li>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)' }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '15px', background: 'rgba(74, 144, 226, 0.1)', borderRadius: '12px', borderLeft: '4px solid var(--primary)', flex: '1' }}>
                       <span style={{ color: 'var(--primary)', fontSize: '20px', marginTop: '2px' }}>✅</span>
                       <span className="text-normal" style={{ color: 'var(--theme-text)' }}>Comenzarás a ahorrar cientos de dólares en producción y desbloquearás una nueva fuente de ingresos digitales, utilizando una habilidad práctica y demandada.</span>
                     </li>
@@ -990,7 +1011,7 @@ function App() {
 
                 <div style={{ position: 'relative', zIndex: 1 }}>
                   <div style={{ fontSize: '48px', marginBottom: '20px' }}>⚡</div>
-                  <h3 style={{ fontSize: 'clamp(22px, 4vw, 32px)', fontWeight: '600', marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+                  <h3 style={{ fontSize: 'clamp(30px, 6vw, 42px)', fontWeight: '600', marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                     Tu Transformación Garantizada en 90 Minutos
                   </h3>
                   <p className="text-large" style={{ fontWeight: '500', maxWidth: '600px', margin: '0 auto' }}>
@@ -1213,7 +1234,7 @@ function App() {
               </div>
 
               <h2 style={{
-                fontSize: 'clamp(28px, 5vw, 40px)',
+                fontSize: 'clamp(36px, 7vw, 52px)',
                 fontWeight: '700',
                 color: 'var(--theme-text)',
                 marginBottom: '20px',
@@ -1334,32 +1355,40 @@ function App() {
                 </div>
 
                 {/* Contenido */}
-                <div style={{ padding: '30px', textAlign: 'center' }}>
-                  <h3 style={{
-                    fontSize: 'clamp(22px, 4vw, 32px)',
-                    fontWeight: '600',
-                    marginBottom: '15px',
-                    color: 'var(--theme-text)',
-                    lineHeight: '1.2',
-                    letterSpacing: '-0.02em'
-                  }}>
-                    Guiones IA Listos para Usar
-                  </h3>
+                <div style={{
+                  padding: '30px',
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%'
+                }}>
+                  <div style={{ flex: '1' }}>
+                    <h3 style={{
+                      fontSize: 'clamp(30px, 6vw, 42px)',
+                      fontWeight: '600',
+                      marginBottom: '15px',
+                      color: 'var(--theme-text)',
+                      lineHeight: '1.2',
+                      letterSpacing: '-0.02em'
+                    }}>
+                      Guiones IA Listos para Usar
+                    </h3>
 
-                  <p className="text-normal" style={{
-                    marginBottom: '25px',
-                    color: 'var(--theme-text-secondary)'
-                  }}>
-                    Colección de guiones optimizados para avatares en diferentes nichos: marketing, educación, finanzas y más.
-                  </p>
+                    <p className="text-normal" style={{
+                      marginBottom: '25px',
+                      color: 'var(--theme-text-secondary)'
+                    }}>
+                      Colección de guiones optimizados para avatares en diferentes nichos: marketing, educación, finanzas y más.
+                    </p>
+                  </div>
 
-                  {/* Precio y ahorro destacado */}
+                  {/* Precio y ahorro destacado - Siempre al final */}
                   <div style={{
                     background: 'linear-gradient(135deg, var(--accent)10, var(--primary)10)',
                     padding: '20px',
                     borderRadius: '20px',
                     border: '2px solid var(--accent)',
-                    marginBottom: '20px'
+                    marginTop: 'auto'
                   }}>
                     <div style={{
                       display: 'flex',
@@ -1489,32 +1518,40 @@ function App() {
                 </div>
 
                 {/* Contenido */}
-                <div style={{ padding: '30px', textAlign: 'center' }}>
-                  <h3 style={{
-                    fontSize: 'clamp(22px, 4vw, 32px)',
-                    fontWeight: '600',
-                    marginBottom: '15px',
-                    color: 'var(--theme-text)',
-                    lineHeight: '1.2',
-                    letterSpacing: '-0.02em'
-                  }}>
-                    Settings Perfectos para Cada Plataforma
-                  </h3>
+                <div style={{
+                  padding: '30px',
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%'
+                }}>
+                  <div style={{ flex: '1' }}>
+                    <h3 style={{
+                      fontSize: 'clamp(30px, 6vw, 42px)',
+                      fontWeight: '600',
+                      marginBottom: '15px',
+                      color: 'var(--theme-text)',
+                      lineHeight: '1.2',
+                      letterSpacing: '-0.02em'
+                    }}>
+                      Settings Perfectos para Cada Plataforma
+                    </h3>
 
-                  <p className="text-normal" style={{
-                    marginBottom: '25px',
-                    color: 'var(--theme-text-secondary)'
-                  }}>
-                    Configuraciones exactas de calidad, iluminación y audio para YouTube, Instagram, LinkedIn, TikTok y presentaciones corporativas.
-                  </p>
+                    <p className="text-normal" style={{
+                      marginBottom: '25px',
+                      color: 'var(--theme-text-secondary)'
+                    }}>
+                      Configuraciones exactas de calidad, iluminación y audio para YouTube, Instagram, LinkedIn, TikTok y presentaciones corporativas.
+                    </p>
+                  </div>
 
-                  {/* Precio y ahorro destacado */}
+                  {/* Precio y ahorro destacado - Siempre al final */}
                   <div style={{
                     background: 'linear-gradient(135deg, var(--primary)10, var(--secondary)10)',
                     padding: '20px',
                     borderRadius: '20px',
                     border: '2px solid var(--primary)',
-                    marginBottom: '20px'
+                    marginTop: 'auto'
                   }}>
                     <div style={{
                       display: 'flex',
@@ -1644,32 +1681,40 @@ function App() {
                 </div>
 
                 {/* Contenido */}
-                <div style={{ padding: '30px', textAlign: 'center' }}>
-                  <h3 style={{
-                    fontSize: 'clamp(22px, 4vw, 32px)',
-                    fontWeight: '600',
-                    marginBottom: '15px',
-                    color: 'var(--theme-text)',
-                    lineHeight: '1.2',
-                    letterSpacing: '-0.02em'
-                  }}>
-                    Sistema para Automatizar tu Producción
-                  </h3>
+                <div style={{
+                  padding: '30px',
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%'
+                }}>
+                  <div style={{ flex: '1' }}>
+                    <h3 style={{
+                      fontSize: 'clamp(30px, 6vw, 42px)',
+                      fontWeight: '600',
+                      marginBottom: '15px',
+                      color: 'var(--theme-text)',
+                      lineHeight: '1.2',
+                      letterSpacing: '-0.02em'
+                    }}>
+                      Sistema para Automatizar tu Producción
+                    </h3>
 
-                  <p className="text-normal" style={{
-                    marginBottom: '25px',
-                    color: 'var(--theme-text-secondary)'
-                  }}>
-                    Flujo de trabajo completo para crear y programar contenido con avatares en múltiples plataformas.
-                  </p>
+                    <p className="text-normal" style={{
+                      marginBottom: '25px',
+                      color: 'var(--theme-text-secondary)'
+                    }}>
+                      Flujo de trabajo completo para crear y programar contenido con avatares en múltiples plataformas.
+                    </p>
+                  </div>
 
-                  {/* Precio y ahorro destacado */}
+                  {/* Precio y ahorro destacado - Siempre al final */}
                   <div style={{
                     background: 'linear-gradient(135deg, var(--secondary)10, var(--accent)10)',
                     padding: '20px',
                     borderRadius: '20px',
                     border: '2px solid var(--secondary)',
-                    marginBottom: '20px'
+                    marginTop: 'auto'
                   }}>
                     <div style={{
                       display: 'flex',
@@ -1976,7 +2021,7 @@ function App() {
                 🛡️ GARANTÍA TOTAL
               </div>
               <h2 style={{
-                fontSize: 'clamp(28px, 5vw, 40px)',
+                fontSize: 'clamp(36px, 7vw, 52px)',
                 fontWeight: '700',
                 color: 'var(--theme-text)',
                 marginBottom: '16px',
@@ -2077,7 +2122,7 @@ function App() {
                 }}>
                   <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>✅</div>
                   <h3 style={{
-                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    fontSize: 'clamp(26px, 5vw, 32px)',
                     fontWeight: '600',
                     marginBottom: '12px',
                     color: '#10b981',
@@ -2104,7 +2149,7 @@ function App() {
                 }}>
                   <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>⚡</div>
                   <h3 style={{
-                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    fontSize: 'clamp(26px, 5vw, 32px)',
                     fontWeight: '600',
                     marginBottom: '12px',
                     color: 'var(--primary)',
@@ -2131,7 +2176,7 @@ function App() {
                 }}>
                   <div style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '16px' }}>🤝</div>
                   <h3 style={{
-                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    fontSize: 'clamp(26px, 5vw, 32px)',
                     fontWeight: '600',
                     marginBottom: '12px',
                     color: 'var(--secondary)',
@@ -2216,7 +2261,7 @@ function App() {
                 </div>
                 
                 <h2 style={{
-                  fontSize: 'clamp(28px, 5vw, 40px)',
+                  fontSize: 'clamp(36px, 7vw, 52px)',
                   fontWeight: '700',
                   marginBottom: '15px',
                   background: 'linear-gradient(135deg, #FF3B30, #FF9500)',
@@ -2866,14 +2911,29 @@ function App() {
                         {/* Email Field */}
                         <div style={{ position: 'relative' }}>
                           <label htmlFor="email" style={{
-                            display: 'block',
-                            marginBottom: 'clamp(6px, 1.5vw, 10px)',
-                            fontWeight: '700',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 'clamp(8px, 2vw, 12px)',
+                            marginBottom: 'clamp(8px, 2vw, 12px)',
+                            fontWeight: '800',
                             color: 'var(--theme-form-text)',
-                            fontSize: 'clamp(14px, 2.5vw, 16px)',
-                            letterSpacing: '0.5px'
+                            fontSize: 'clamp(18px, 3.5vw, 22px)',
+                            letterSpacing: '0.5px',
+                            textTransform: 'uppercase'
                           }}>
-                            <span style={{ marginRight: '8px' }}>📧</span>
+                            <div style={{
+                              width: 'clamp(24px, 5vw, 32px)',
+                              height: 'clamp(24px, 5vw, 32px)',
+                              borderRadius: '50%',
+                              background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: 'clamp(12px, 2.5vw, 16px)',
+                              boxShadow: '0 4px 12px rgba(74, 144, 226, 0.3)'
+                            }}>
+                              📧
+                            </div>
                             Correo electrónico
                           </label>
                           <div style={{ position: 'relative' }}>
@@ -2887,41 +2947,70 @@ function App() {
                               maxLength={100}
                               style={{
                                 width: '100%',
-                                padding: 'clamp(12px, 2.5vw, 16px) clamp(16px, 3vw, 20px)',
-                                borderRadius: 'clamp(8px, 2vw, 12px)',
+                                padding: 'clamp(16px, 3vw, 20px) clamp(20px, 4vw, 24px)',
+                                borderRadius: 'clamp(12px, 2.5vw, 16px)',
                                 border: formErrors.email
-                                  ? '2px solid #ef4444'
-                                  : '2px solid rgba(255, 255, 255, 0.1)',
-                                fontSize: 'clamp(14px, 3vw, 16px)',
-                                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                                backdropFilter: 'blur(10px)',
+                                  ? '3px solid #ef4444'
+                                  : '3px solid rgba(255, 255, 255, 0.1)',
+                                fontSize: 'clamp(18px, 3.5vw, 22px)',
+                                background: `
+                                  linear-gradient(135deg,
+                                    rgba(255, 255, 255, 0.08) 0%,
+                                    rgba(255, 255, 255, 0.03) 100%
+                                  )
+                                `,
+                                backdropFilter: 'blur(20px)',
                                 color: 'var(--theme-text)',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                                 outline: 'none',
-                                fontFamily: 'inherit'
+                                fontFamily: 'inherit',
+                                fontWeight: '600',
+                                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
                               }}
                               onFocus={(e) => {
-                                e.target.style.border = '2px solid var(--primary)';
-                                e.target.style.boxShadow = '0 0 0 4px rgba(74, 144, 226, 0.1)';
-                                e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                                e.target.style.border = '3px solid var(--primary)';
+                                e.target.style.boxShadow = '0 0 0 6px rgba(74, 144, 226, 0.15), 0 12px 40px rgba(0, 0, 0, 0.15)';
+                                e.target.style.background = `
+                                  linear-gradient(135deg,
+                                    rgba(255, 255, 255, 0.12) 0%,
+                                    rgba(255, 255, 255, 0.06) 100%
+                                  )
+                                `;
+                                e.target.style.transform = 'translateY(-2px)';
                               }}
                               onBlur={(e) => {
                                 e.target.style.border = formErrors.email
-                                  ? '2px solid #ef4444'
-                                  : '2px solid rgba(255, 255, 255, 0.1)';
-                                e.target.style.boxShadow = 'none';
-                                e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                                  ? '3px solid #ef4444'
+                                  : '3px solid rgba(255, 255, 255, 0.1)';
+                                e.target.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
+                                e.target.style.background = `
+                                  linear-gradient(135deg,
+                                    rgba(255, 255, 255, 0.08) 0%,
+                                    rgba(255, 255, 255, 0.03) 100%
+                                  )
+                                `;
+                                e.target.style.transform = 'translateY(0)';
                               }}
                             />
-                            {/* Success indicator */}
+                            {/* Enhanced Success indicator */}
                             {formData.email && !formErrors.email && (
                               <div style={{
                                 position: 'absolute',
-                                right: 'clamp(12px, 2.5vw, 16px)',
+                                right: 'clamp(16px, 3vw, 20px)',
                                 top: '50%',
                                 transform: 'translateY(-50%)',
-                                color: '#10b981',
-                                fontSize: 'clamp(16px, 3vw, 20px)'
+                                width: 'clamp(24px, 5vw, 32px)',
+                                height: 'clamp(24px, 5vw, 32px)',
+                                borderRadius: '50%',
+                                background: 'linear-gradient(135deg, #10b981, #059669)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                color: 'white',
+                                fontSize: 'clamp(12px, 2.5vw, 16px)',
+                                fontWeight: '800',
+                                boxShadow: '0 4px 12px rgba(16, 185, 129, 0.4)',
+                                animation: 'successPop 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                               }}>
                                 ✓
                               </div>
@@ -2954,14 +3043,29 @@ function App() {
                         {/* Phone Field */}
                         <div style={{ position: 'relative' }}>
                           <label htmlFor="phoneNumber" style={{
-                            display: 'block',
-                            marginBottom: 'clamp(6px, 1.5vw, 10px)',
-                            fontWeight: '700',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 'clamp(8px, 2vw, 12px)',
+                            marginBottom: 'clamp(8px, 2vw, 12px)',
+                            fontWeight: '800',
                             color: 'var(--theme-form-text)',
-                            fontSize: 'clamp(14px, 2.5vw, 16px)',
-                            letterSpacing: '0.5px'
+                            fontSize: 'clamp(18px, 3.5vw, 22px)',
+                            letterSpacing: '0.5px',
+                            textTransform: 'uppercase'
                           }}>
-                            <span style={{ marginRight: '8px' }}>📱</span>
+                            <div style={{
+                              width: 'clamp(24px, 5vw, 32px)',
+                              height: 'clamp(24px, 5vw, 32px)',
+                              borderRadius: '50%',
+                              background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: 'clamp(12px, 2.5vw, 16px)',
+                              boxShadow: '0 4px 12px rgba(74, 144, 226, 0.3)'
+                            }}>
+                              📱
+                            </div>
                             Número de celular
                           </label>
                           <div style={{
@@ -2976,46 +3080,71 @@ function App() {
                               minWidth: '110px'
                             }}>
                               <select
-                                value={formData.phoneCountry.code}
+                                value={`${formData.phoneCountry.flag} ${formData.phoneCountry.code}`}
                                 onChange={(e) => {
-                                  const selectedCountry = countryCodes.find(country => country.code === e.target.value);
-                                  handleCountryCodeChange(selectedCountry);
+                                  // Extraer solo el código del valor seleccionado
+                                  const selectedValue = e.target.value;
+                                  const codeMatch = selectedValue.match(/\+\d+/);
+                                  if (codeMatch) {
+                                    const selectedCountry = countryCodes.find(country => country.code === codeMatch[0]);
+                                    handleCountryCodeChange(selectedCountry);
+                                  }
                                 }}
                                 style={{
                                   width: '100%',
-                                  padding: 'clamp(12px, 2.5vw, 16px) clamp(16px, 3vw, 20px) clamp(12px, 2.5vw, 16px) clamp(38px, 8vw, 45px)',
-                                  borderRadius: 'clamp(8px, 2vw, 12px)',
-                                  border: '2px solid rgba(255, 255, 255, 0.1)',
-                                  fontSize: 'clamp(14px, 3vw, 16px)',
+                                  padding: 'clamp(16px, 3vw, 20px) clamp(20px, 4vw, 24px)',
+                                  borderRadius: 'clamp(12px, 2.5vw, 16px)',
+                                  border: '3px solid rgba(255, 255, 255, 0.1)',
+                                  fontSize: 'clamp(16px, 3vw, 18px)',
                                   appearance: 'none',
-                                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                                  backdropFilter: 'blur(10px)',
+                                  background: `
+                                    linear-gradient(135deg,
+                                      rgba(255, 255, 255, 0.08) 0%,
+                                      rgba(255, 255, 255, 0.03) 100%
+                                    )
+                                  `,
+                                  backdropFilter: 'blur(20px)',
                                   color: 'var(--theme-text)',
                                   fontFamily: 'inherit',
+                                  fontWeight: '600',
                                   cursor: 'pointer',
-                                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                  outline: 'none'
+                                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                  outline: 'none',
+                                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
                                 }}
                                 onFocus={(e) => {
-                                  e.target.style.border = '2px solid var(--primary)';
-                                  e.target.style.boxShadow = '0 0 0 4px rgba(74, 144, 226, 0.1)';
-                                  e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                                  e.target.style.border = '3px solid var(--primary)';
+                                  e.target.style.boxShadow = '0 0 0 6px rgba(74, 144, 226, 0.15), 0 12px 40px rgba(0, 0, 0, 0.15)';
+                                  e.target.style.background = `
+                                    linear-gradient(135deg,
+                                      rgba(255, 255, 255, 0.12) 0%,
+                                      rgba(255, 255, 255, 0.06) 100%
+                                    )
+                                  `;
+                                  e.target.style.transform = 'translateY(-2px)';
                                 }}
                                 onBlur={(e) => {
-                                  e.target.style.border = '2px solid rgba(255, 255, 255, 0.1)';
-                                  e.target.style.boxShadow = 'none';
-                                  e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                                  e.target.style.border = '3px solid rgba(255, 255, 255, 0.1)';
+                                  e.target.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
+                                  e.target.style.background = `
+                                    linear-gradient(135deg,
+                                      rgba(255, 255, 255, 0.08) 0%,
+                                      rgba(255, 255, 255, 0.03) 100%
+                                    )
+                                  `;
+                                  e.target.style.transform = 'translateY(0)';
                                 }}
                               >
                                 {countryCodes.map((country) => (
                                   <option
                                     key={country.code}
-                                    value={country.code}
+                                    value={`${country.flag} ${country.code}`}
                                     style={{
                                       backgroundColor: 'var(--theme-background)',
                                       color: 'var(--theme-text)',
                                       padding: '8px',
-                                      fontFamily: 'inherit'
+                                      fontFamily: 'inherit',
+                                      fontSize: '16px'
                                     }}
                                   >
                                     {country.flag} {country.code}
@@ -3023,20 +3152,7 @@ function App() {
                                 ))}
                               </select>
 
-                              {/* Flag and dropdown icon */}
-                              <div style={{
-                                position: 'absolute',
-                                left: 'clamp(12px, 2.5vw, 16px)',
-                                top: '50%',
-                                transform: 'translateY(-50%)',
-                                pointerEvents: 'none',
-                                fontSize: 'clamp(14px, 3vw, 18px)',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                              }}>
-                                {formData.phoneCountry.flag}
-                              </div>
+                              {/* Dropdown arrow */}
                               <div style={{
                                 position: 'absolute',
                                 right: 'clamp(8px, 2vw, 12px)',
@@ -3066,41 +3182,70 @@ function App() {
                                 maxLength={15}
                                 style={{
                                   width: '100%',
-                                  padding: 'clamp(12px, 2.5vw, 16px) clamp(16px, 3vw, 20px)',
-                                  borderRadius: 'clamp(8px, 2vw, 12px)',
+                                  padding: 'clamp(16px, 3vw, 20px) clamp(20px, 4vw, 24px)',
+                                  borderRadius: 'clamp(12px, 2.5vw, 16px)',
                                   border: formErrors.phoneNumber
-                                    ? '2px solid #ef4444'
-                                    : '2px solid rgba(255, 255, 255, 0.1)',
-                                  fontSize: 'clamp(14px, 3vw, 16px)',
+                                    ? '3px solid #ef4444'
+                                    : '3px solid rgba(255, 255, 255, 0.1)',
+                                  fontSize: 'clamp(18px, 3.5vw, 22px)',
                                   fontFamily: 'inherit',
-                                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                                  backdropFilter: 'blur(10px)',
+                                  fontWeight: '600',
+                                  background: `
+                                    linear-gradient(135deg,
+                                      rgba(255, 255, 255, 0.08) 0%,
+                                      rgba(255, 255, 255, 0.03) 100%
+                                    )
+                                  `,
+                                  backdropFilter: 'blur(20px)',
                                   color: 'var(--theme-text)',
-                                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                  outline: 'none'
+                                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                  outline: 'none',
+                                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
                                 }}
                                 onFocus={(e) => {
-                                  e.target.style.border = '2px solid var(--primary)';
-                                  e.target.style.boxShadow = '0 0 0 4px rgba(74, 144, 226, 0.1)';
-                                  e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                                  e.target.style.border = '3px solid var(--primary)';
+                                  e.target.style.boxShadow = '0 0 0 6px rgba(74, 144, 226, 0.15), 0 12px 40px rgba(0, 0, 0, 0.15)';
+                                  e.target.style.background = `
+                                    linear-gradient(135deg,
+                                      rgba(255, 255, 255, 0.12) 0%,
+                                      rgba(255, 255, 255, 0.06) 100%
+                                    )
+                                  `;
+                                  e.target.style.transform = 'translateY(-2px)';
                                 }}
                                 onBlur={(e) => {
                                   e.target.style.border = formErrors.phoneNumber
-                                    ? '2px solid #ef4444'
-                                    : '2px solid rgba(255, 255, 255, 0.1)';
-                                  e.target.style.boxShadow = 'none';
-                                  e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                                    ? '3px solid #ef4444'
+                                    : '3px solid rgba(255, 255, 255, 0.1)';
+                                  e.target.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
+                                  e.target.style.background = `
+                                    linear-gradient(135deg,
+                                      rgba(255, 255, 255, 0.08) 0%,
+                                      rgba(255, 255, 255, 0.03) 100%
+                                    )
+                                  `;
+                                  e.target.style.transform = 'translateY(0)';
                                 }}
                               />
-                              {/* Success indicator */}
+                              {/* Enhanced Success indicator */}
                               {formData.phoneNumber && !formErrors.phoneNumber && (
                                 <div style={{
                                   position: 'absolute',
-                                  right: 'clamp(12px, 2.5vw, 16px)',
+                                  right: 'clamp(16px, 3vw, 20px)',
                                   top: '50%',
                                   transform: 'translateY(-50%)',
-                                  color: '#10b981',
-                                  fontSize: 'clamp(16px, 3vw, 20px)'
+                                  width: 'clamp(24px, 5vw, 32px)',
+                                  height: 'clamp(24px, 5vw, 32px)',
+                                  borderRadius: '50%',
+                                  background: 'linear-gradient(135deg, #10b981, #059669)',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  color: 'white',
+                                  fontSize: 'clamp(12px, 2.5vw, 16px)',
+                                  fontWeight: '800',
+                                  boxShadow: '0 4px 12px rgba(16, 185, 129, 0.4)',
+                                  animation: 'successPop 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                                 }}>
                                   ✓
                                 </div>
@@ -3140,7 +3285,7 @@ function App() {
                             display: 'flex',
                             alignItems: 'flex-start',
                             gap: 'clamp(8px, 2vw, 12px)',
-                            fontSize: 'clamp(12px, 2.5vw, 14px)',
+                            fontSize: 'clamp(16px, 3vw, 20px)',
                             color: 'var(--theme-text-secondary)',
                             cursor: 'pointer',
                             lineHeight: '1.5',
@@ -3290,7 +3435,7 @@ function App() {
                             <div>
                               <p style={{
                                 margin: 0,
-                                fontSize: 'clamp(12px, 2.5vw, 14px)',
+                                fontSize: 'clamp(16px, 3vw, 20px)',
                                 fontWeight: '600',
                                 color: 'var(--theme-text)'
                               }}>
@@ -3298,7 +3443,7 @@ function App() {
                               </p>
                               <p style={{
                                 margin: 0,
-                                fontSize: 'clamp(10px, 2vw, 12px)',
+                                fontSize: 'clamp(14px, 2.5vw, 18px)',
                                 color: 'var(--theme-text-secondary)',
                                 marginTop: '2px'
                               }}>
@@ -3363,7 +3508,7 @@ function App() {
                               {getSecurityFeedback(securityStatus.status, securityStatus.message).styles.icon}
                             </div>
                             <p style={{
-                              fontSize: 'clamp(12px, 2.5vw, 14px)',
+                              fontSize: 'clamp(16px, 3vw, 20px)',
                               margin: 0,
                               fontWeight: '600',
                               lineHeight: '1.4',
@@ -3390,7 +3535,7 @@ function App() {
                           }}>
                             <p style={{
                               margin: 0,
-                              fontSize: 'clamp(12px, 2.5vw, 14px)',
+                              fontSize: 'clamp(16px, 3vw, 20px)',
                               color: 'var(--theme-text-secondary)',
                               lineHeight: '1.5'
                             }}>
@@ -3733,17 +3878,17 @@ function App() {
                         <span style={{ marginRight: '8px', fontSize: '18px' }}>
                           {getSecurityFeedback(securityStatus.status, securityStatus.message).styles.icon}
                         </span>
-                        <p style={{ fontSize: '14px', margin: 0, fontWeight: '600' }}>
+                        <p className="text-normal" style={{ margin: 0, fontWeight: '600' }}>
                           {securityStatus.message}
                         </p>
                       </div>
                     )}
 
-                    <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎉</div>
-                    <h3 style={{ fontSize: '28px', marginBottom: '16px', color: 'var(--primary)', fontWeight: '700' }}>
+                    <div style={{ fontSize: 'clamp(48px, 10vw, 72px)', marginBottom: '16px' }}>🎉</div>
+                    <h3 style={{ fontSize: 'clamp(30px, 6vw, 42px)', marginBottom: '16px', color: 'var(--primary)', fontWeight: '700', letterSpacing: '-0.02em' }}>
                       {securityStatus.status === 'info' ? '¡Ya tienes un registro!' : '¡Gracias por Registrarte!'}
                     </h3>
-                    <p style={{ marginBottom: '20px', fontSize: '16px', color: 'var(--theme-form-text)' }}>
+                    <p className="text-large" style={{ marginBottom: '20px', color: 'var(--theme-form-text)' }}>
                       {securityStatus.status === 'info'
                         ? 'Perfecto, ya tienes tus datos registrados. Ahora puedes proceder con el pago para acceder al curso.'
                         : 'Hemos recibido tus datos correctamente. En breve recibirás información exclusiva sobre el curso en tu WhatsApp y correo electrónico.'
@@ -3751,21 +3896,21 @@ function App() {
                     </p>
 
                     <div style={{ backgroundColor: 'rgba(59, 130, 246, 0.1)', padding: '20px', borderRadius: '8px', marginBottom: '24px' }}>
-                      <h4 style={{ fontSize: '20px', marginBottom: '12px', color: 'var(--theme-form-text)', fontWeight: '700' }}>
+                      <h4 style={{ fontSize: 'clamp(26px, 5vw, 32px)', marginBottom: '12px', color: 'var(--theme-form-text)', fontWeight: '700', letterSpacing: '-0.02em' }}>
                         ¿Por qué esperar cuando puedes empezar hoy mismo?
                       </h4>
-                      <p style={{ marginBottom: '16px', color: 'var(--theme-text-secondary)' }}>
+                      <p className="text-normal" style={{ marginBottom: '16px', color: 'var(--theme-text-secondary)' }}>
                         Los cupos son limitados y la oferta especial termina pronto. No pierdas esta oportunidad única de transformar tu presencia digital y crear nuevas fuentes de ingresos.
                       </p>
-                      <ul style={{ textAlign: 'left', marginBottom: '20px', paddingLeft: '20px', color: 'var(--theme-form-text)' }}>
-                        <li style={{ marginBottom: '8px' }}>✅ Acceso inmediato a todo el contenido</li>
-                        <li style={{ marginBottom: '8px' }}>✅ Bonos exclusivos valorados en más de $500</li>
-                        <li style={{ marginBottom: '8px' }}>✅ Garantía de satisfacción de 30 días</li>
+                      <ul className="text-normal" style={{ textAlign: 'left', marginBottom: '20px', paddingLeft: '20px', color: 'var(--theme-form-text)' }}>
+                        <li style={{ marginBottom: '12px', lineHeight: '1.5' }}>✅ Acceso inmediato a todo el contenido</li>
+                        <li style={{ marginBottom: '12px', lineHeight: '1.5' }}>✅ Bonos exclusivos valorados en más de $500</li>
+                        <li style={{ marginBottom: '12px', lineHeight: '1.5' }}>✅ Garantía de satisfacción de 30 días</li>
                       </ul>
 
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                        <span style={{ textDecoration: 'line-through', color: 'var(--gray)', marginRight: '10px', fontSize: '18px' }}>$100</span>
-                        <span style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '24px' }}>$30</span>
+                        <span style={{ textDecoration: 'line-through', color: 'var(--gray)', marginRight: '10px', fontSize: 'clamp(22px, 4vw, 28px)' }}>$100</span>
+                        <span style={{ color: 'var(--primary)', fontWeight: '700', fontSize: 'clamp(28px, 6vw, 36px)' }}>$30</span>
                       </div>
 
                       <PaymentButtons
@@ -3787,7 +3932,7 @@ function App() {
                       />
                     </div>
 
-                    <p style={{ fontWeight: '600', color: 'var(--primary)' }}>
+                    <p className="text-large" style={{ fontWeight: '600', color: 'var(--primary)' }}>
                       ¡Prepárate para transformar tu presencia digital con avatares hiperrealistas!
                     </p>
                   </div>
@@ -4419,8 +4564,8 @@ function App() {
                     {/* Main Hero Image Container */}
                     <div style={{
                       position: 'relative',
-                      width: 'clamp(200px, 40vw, 350px)',
-                      height: 'clamp(200px, 40vw, 350px)',
+                      width: 'clamp(200px, 40vw, 200px)',
+                      height: 'clamp(200px, 40vw, 200px)',
                       marginBottom: 'clamp(20px, 4vw, 30px)'
                     }}>
                       {/* Background decorative rings */}
@@ -4509,8 +4654,8 @@ function App() {
                     </div>
                   </div>
 
-                  <h3 style={{
-                    fontSize: 'clamp(18px, 4vw, 28px)',
+                  <h1 style={{
+                    fontSize: 'clamp(40px, 4vw, 40px)',
                     fontWeight: '800',
                     color: 'var(--theme-text)',
                     marginBottom: 'clamp(12px, 2.5vw, 20px)',
@@ -4528,10 +4673,10 @@ function App() {
                     }}>
                       transformación digital?
                     </span>
-                  </h3>
+                  </h1>
 
-                  <p style={{
-                    fontSize: 'clamp(14px, 3vw, 18px)',
+                  <h2 style={{
+                    fontSize: 'clamp(20px, 3vw, 18px)',
                     color: 'var(--theme-text-secondary)',
                     marginBottom: 'clamp(20px, 4vw, 32px)',
                     lineHeight: '1.6',
@@ -4539,7 +4684,7 @@ function App() {
                     margin: '0 auto clamp(20px, 4vw, 32px)'
                   }}>
                     No dejes que las dudas te detengan. ¡Únete ahora y descubre todo lo que puedes lograr!
-                  </p>
+                  </h2>
 
                   <a
                     href="#lead-form"
@@ -4668,6 +4813,7 @@ function App() {
 }
 
 export default App
+
 
 
 

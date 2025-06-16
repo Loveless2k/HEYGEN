@@ -38,17 +38,17 @@ Esta guía documenta el rediseño visual completo de la landing page, manteniend
 font-family: 'Poppins', sans-serif;
 ```
 
-### Jerarquía Tipográfica Estandarizada
+### Jerarquía Tipográfica Estandarizada - Máxima Legibilidad
 
 | Elemento | Tamaño Responsivo | Peso | Espaciado |
 |----------|-------------------|------|-----------|
-| **H1** | `clamp(32px, 6vw, 48px)` | `800` (ExtraBold) | `-0.02em` |
-| **H2** | `clamp(28px, 5vw, 40px)` | `700` (Bold) | `-0.02em` |
-| **H3** | `clamp(22px, 4vw, 32px)` | `600` (SemiBold) | `-0.02em` |
-| **H4** | `clamp(18px, 3vw, 24px)` | `600` (SemiBold) | `-0.02em` |
-| **Texto Grande** | `clamp(16px, 2.5vw, 20px)` | `400` (Regular) | `0.01em` |
-| **Texto Normal** | `clamp(14px, 2vw, 18px)` | `400` (Regular) | `0.01em` |
-| **Texto Pequeño** | `clamp(12px, 1.5vw, 16px)` | `400` (Regular) | `0.01em` |
+| **H1** | `clamp(42px, 8vw, 64px)` | `800` (ExtraBold) | `-0.02em` |
+| **H2** | `clamp(36px, 7vw, 52px)` | `700` (Bold) | `-0.02em` |
+| **H3** | `clamp(30px, 6vw, 42px)` | `600` (SemiBold) | `-0.02em` |
+| **H4** | `clamp(26px, 5vw, 32px)` | `600` (SemiBold) | `-0.02em` |
+| **Texto Grande** | `clamp(22px, 4vw, 28px)` | `400` (Regular) | `0.01em` |
+| **Texto Normal** | `clamp(20px, 3vw, 26px)` | `400` (Regular) | `0.01em` |
+| **Texto Pequeño** | `clamp(18px, 2.5vw, 24px)` | `400` (Regular) | `0.01em` |
 
 ### Altura de Línea
 - **Encabezados**: `1.2`
